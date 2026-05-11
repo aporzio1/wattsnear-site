@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WattsNear — Find the best EV charger near you</title>
-  <meta name="description" content="WattsNear helps EV drivers find the nearest charger, compare prices, and pick the best stop for the route ahead.">
+  <title>WattsNear — Find the closest, cheapest EV charger</title>
+  <meta name="description" content="WattsNear helps EV drivers find the closest and most affordable charging stations, plan trips around battery range, and log sessions. iPhone, CarPlay, Siri, and home-screen widget. Free on the App Store.">
   <meta name="theme-color" content="#0f172a">
-  <meta property="og:title" content="WattsNear — Find the best EV charger near you">
-  <meta property="og:description" content="Find nearby chargers, compare estimated costs, and choose the best stop for your drive.">
+  <meta property="og:title" content="WattsNear — Find the closest, cheapest EV charger">
+  <meta property="og:description" content="Find nearby chargers, compare cost per kWh, plan trips around your battery, and log sessions. iPhone + CarPlay. Free on the App Store.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aporzio1.github.io/wattsnear-site/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://aporzio1.github.io/wattsnear-site/">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,15 +26,16 @@
         </span>
         <span>
           <strong>WattsNear</strong>
-          <span>Find the best charger near you</span>
+          <span>Closest &amp; cheapest EV chargers</span>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#features">Features</a>
+        <a href="#carplay">CarPlay</a>
         <a href="#calculator">Calculator</a>
         <a href="#faq">FAQ</a>
-        <a href="#waitlist" class="nav-cta">Join the beta</a>
+        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" class="nav-cta" rel="noopener">Get the app</a>
       </nav>
 
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
@@ -43,138 +47,162 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <div class="eyebrow">Built for road trips, errands, and everyday charging</div>
-          <h1>Find the best EV charger near you — fast.</h1>
+          <div class="eyebrow">For iPhone &amp; CarPlay · Free</div>
+          <h1>Find the closest, cheapest EV charger — fast.</h1>
           <p class="lede">
-            WattsNear helps drivers compare nearby charging options, estimate what they’ll pay,
-            and choose a stop that fits the route ahead. It’s a simple first draft today — and a
-            solid foundation for the full product.
+            WattsNear shows you nearby charging stations from the U.S. Department of Energy's
+            NREL database, sorted by distance or price per kWh. Plan trips around your battery
+            range, log charging sessions, and use it hands-free with Siri or CarPlay.
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#calculator">Try the cost calculator</a>
+            <a class="button primary app-store" href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">
+              <svg class="app-store-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.6 12.7c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.4 0-2.6.8-3.3 2-1.4 2.5-.4 6.1 1 8.1.7 1 1.5 2.1 2.5 2 1 0 1.4-.6 2.6-.6 1.2 0 1.5.6 2.6.6 1.1 0 1.8-1 2.4-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-3.1zm-1.9-5.7c.5-.7.9-1.6.8-2.5-.8 0-1.8.6-2.3 1.2-.5.6-1 1.5-.9 2.4.9.1 1.8-.4 2.4-1.1z"/></svg>
+              <span class="app-store-text"><small>Download on the</small><strong>App Store</strong></span>
+            </a>
             <a class="button secondary" href="#features">See what it does</a>
           </div>
 
           <div class="metrics" aria-label="Product highlights">
             <article>
-              <strong>Nearest first</strong>
-              <span>See nearby chargers in seconds.</span>
+              <strong>Closest first</strong>
+              <span>Sort live NREL station data by distance from where you are.</span>
             </article>
             <article>
-              <strong>Price-aware</strong>
-              <span>Compare estimated charging costs before you leave.</span>
+              <strong>Cheapest first</strong>
+              <span>See estimated cost per kWh and pick the better deal.</span>
             </article>
             <article>
-              <strong>Route-friendly</strong>
-              <span>Pick the stop that fits your drive, not just your map.</span>
+              <strong>CarPlay-ready</strong>
+              <span>Browse nearest, cheapest, and favorites from your dash.</span>
             </article>
           </div>
         </div>
 
-        <div class="hero-panel" aria-label="Preview of nearby chargers">
+        <div class="hero-panel" aria-label="Example results">
           <div class="panel-header">
-            <span class="pill">Live preview</span>
-            <span class="muted">Downtown Atlanta • 12:45 PM</span>
+            <span class="pill">Example results</span>
+            <span class="muted">Sorted by cheapest</span>
           </div>
 
           <div class="station-list">
             <article class="station-card featured">
               <div>
-                <h2>ChargePoint — Peachtree Center</h2>
-                <p>0.4 mi away • 8 fast chargers • 24/7 access</p>
+                <h2>Tesla Supercharger</h2>
+                <p>1.2 mi · 12 stalls · CCS &amp; NACS · 24/7</p>
+              </div>
+              <strong>$0.36 / kWh</strong>
+            </article>
+
+            <article class="station-card">
+              <div>
+                <h2>ChargePoint</h2>
+                <p>0.4 mi · 8 DC fast chargers · 24/7</p>
               </div>
               <strong>$0.41 / kWh</strong>
             </article>
 
             <article class="station-card">
               <div>
-                <h2>EVgo — Midtown Station</h2>
-                <p>0.8 mi away • 4 fast chargers • covered parking</p>
+                <h2>EVgo</h2>
+                <p>0.8 mi · 4 DC fast chargers · covered</p>
               </div>
               <strong>$0.48 / kWh</strong>
-            </article>
-
-            <article class="station-card">
-              <div>
-                <h2>Tesla Supercharger — Arts Center</h2>
-                <p>1.2 mi away • 12 stalls • route-aware navigation</p>
-              </div>
-              <strong>$0.36 / kWh</strong>
             </article>
           </div>
 
           <div class="panel-footer">
             <div>
-              <span class="label">Best value</span>
-              <strong>Save up to $11.20 per fill-up</strong>
+              <span class="label">Filter</span>
+              <strong>Free charging · Network · Connector · Status</strong>
             </div>
-            <a href="#waitlist">Get updates</a>
+            <a href="#features">See all filters</a>
           </div>
         </div>
       </section>
 
       <section class="section features" id="features">
         <div class="section-heading">
-          <span class="eyebrow">Why WattsNear works</span>
-          <h2>Useful details without the clutter.</h2>
-          <p>We’re keeping the first draft focused: the things drivers actually need when they’re looking for a charge.</p>
+          <span class="eyebrow">What's inside</span>
+          <h2>Everything an EV driver actually needs.</h2>
+          <p>Built on live NREL data — the same charging-station database the U.S. Department of Energy maintains. No accounts, no servers, no tracking.</p>
         </div>
 
         <div class="card-grid">
           <article class="feature-card">
             <div class="icon">⚡</div>
-            <h3>Nearest charger at a glance</h3>
-            <p>Search the area and instantly see the closest charging options with distance and access details.</p>
+            <h3>Closest &amp; cheapest tabs</h3>
+            <p>Two quick-access lists answer the only two questions that matter when you need a charge.</p>
           </article>
           <article class="feature-card">
             <div class="icon">💸</div>
-            <h3>Estimated cost before you plug in</h3>
-            <p>Compare rough charging costs across stations so you can skip the expensive stop when you want to.</p>
+            <h3>Price-aware sorting</h3>
+            <p>Estimated cost per kWh is parsed from the NREL pricing field so you can compare before you plug in.</p>
           </article>
           <article class="feature-card">
             <div class="icon">🧭</div>
-            <h3>Route-aware planning</h3>
-            <p>Pick a charger that fits your trip, not just the nearest pin on the map.</p>
+            <h3>Trip range planner</h3>
+            <p>Enter your battery, efficiency, and target charge level to see which chargers are reachable on your current state of charge.</p>
           </article>
           <article class="feature-card">
             <div class="icon">⭐</div>
-            <h3>Save favorites</h3>
-            <p>Keep a shortlist of chargers you trust for your commute, errands, and road trips.</p>
+            <h3>Favorites &amp; avoid list</h3>
+            <p>Star the chargers you trust and hide the ones you don't. Both lists sync across your Apple devices.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">🗺️</div>
+            <h3>Map with "search this area"</h3>
+            <p>Pan anywhere — destination, vacation, a friend's house — and refresh results from the new center point.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">🔌</div>
+            <h3>Connector &amp; network filters</h3>
+            <p>NACS, CCS, CHAdeMO, J1772, Tesla — and any network from Tesla and Electrify America down to municipal one-offs.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">📒</div>
+            <h3>Session log</h3>
+            <p>Record what you paid, how many kWh you took on, and where — so you can see your real-world charging cost over time.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">☁️</div>
+            <h3>Optional iCloud sync</h3>
+            <p>Favorites, history, vehicle profiles, and sessions sync through your private iCloud database. Opt-in, no third-party servers.</p>
           </article>
         </div>
       </section>
 
-      <section class="section workflow">
+      <section class="section workflow" id="carplay">
         <div class="section-heading narrow">
-          <span class="eyebrow">How it works</span>
-          <h2>Three steps from “where should I stop?” to “plugged in.”</h2>
+          <span class="eyebrow">CarPlay, Siri &amp; Widget</span>
+          <h2>Built for the driver's seat, not just the home screen.</h2>
+          <p>WattsNear shows up where you actually use it — on your dashboard, from Siri, and as a tap-and-go widget.</p>
         </div>
 
         <div class="steps">
           <article>
-            <span>01</span>
-            <h3>Search near you</h3>
-            <p>Open WattsNear and see chargers by distance, cost, and convenience.</p>
+            <span>CarPlay</span>
+            <h3>Four tabs at a glance</h3>
+            <p>Nearest, Cheapest, Favorites, and Search — all sortable on your car's display. Filters carry over from your phone.</p>
           </article>
           <article>
-            <span>02</span>
-            <h3>Compare the options</h3>
-            <p>Review speed, price, and access so you can choose the best fit for the moment.</p>
+            <span>Siri</span>
+            <h3>Hands-free shortcuts</h3>
+            <p>"Hey Siri, find a charger" pulls up nearest stations through App Intents. Add custom shortcuts in the Shortcuts app.</p>
           </article>
           <article>
-            <span>03</span>
-            <h3>Head straight there</h3>
-            <p>Use the charger that makes the most sense for your route and your budget.</p>
+            <span>Widget</span>
+            <h3>Closest charger on the home screen</h3>
+            <p>The home-screen widget keeps the nearest charger one tap away. Tap to launch straight into directions.</p>
           </article>
         </div>
       </section>
 
       <section class="section calculator" id="calculator">
         <div class="section-heading narrow">
-          <span class="eyebrow">Quick estimate</span>
-          <h2>See what your electric miles could cost.</h2>
-          <p>Use this first-pass calculator to get a feel for the savings WattsNear can help you compare.</p>
+          <span class="eyebrow">EV vs. gas</span>
+          <h2>See what your electric miles really cost.</h2>
+          <p>Tweak the sliders to compare a full year of electric driving against the equivalent gallons of gas. The in-app trip-range planner uses the same kind of math, scaled to your actual vehicle.</p>
         </div>
 
         <div class="calculator-card">
@@ -224,39 +252,51 @@
       <section class="section faq" id="faq">
         <div class="section-heading narrow">
           <span class="eyebrow">FAQ</span>
-          <h2>Answers for the first draft.</h2>
+          <h2>Common questions.</h2>
         </div>
 
         <div class="faq-list">
           <details open>
-            <summary>Is this a live product?</summary>
-            <p>Not yet — this is the first web draft and a clear landing page for the WattsNear brand.</p>
+            <summary>How much does WattsNear cost?</summary>
+            <p>Free on the App Store. The free version shows a banner ad; a one-time "Remove Ads" in-app purchase strips them out forever. No subscriptions.</p>
           </details>
           <details>
-            <summary>What platform will WattsNear support?</summary>
-            <p>The app is currently positioned around iPhone and CarPlay, with the website acting as the public front door.</p>
+            <summary>What devices does WattsNear support?</summary>
+            <p>iPhone running iOS 18 or later, plus CarPlay. A home-screen widget and App Intents (Siri / Shortcuts / Spotlight) are included.</p>
           </details>
           <details>
-            <summary>Can I contact you today?</summary>
-            <p>Use the waitlist form below and the page will save your email locally as a placeholder for the next build step.</p>
+            <summary>Where does the station data come from?</summary>
+            <p>The U.S. Department of Energy's NREL Alternative Fueling Station Locator — the same public dataset many EV apps rely on. Station info is provided by the networks themselves and may occasionally be out of date.</p>
+          </details>
+          <details>
+            <summary>Do you collect my location or browsing data?</summary>
+            <p>No. WattsNear has no backend. Your device sends its coordinates directly to the NREL API to find nearby stations; we never see or store them. Favorites, history, and sessions live only on your device, with optional sync through your private iCloud database.</p>
+          </details>
+          <details>
+            <summary>How is the price per kWh estimated?</summary>
+            <p>NREL exposes a free-text pricing field that each network fills in differently. WattsNear parses common formats (per kWh, per minute, free, member-only rates) into a single rough estimate so the "cheapest" sort is meaningful. Always verify at the station.</p>
+          </details>
+          <details>
+            <summary>Can I filter to only free chargers?</summary>
+            <p>Yes — one toggle in the filter sheet. There are also filters for connector type (NACS, CCS, CHAdeMO, J1772, Tesla), network, search radius, and station status.</p>
           </details>
         </div>
       </section>
 
-      <section class="section waitlist" id="waitlist">
+      <section class="section waitlist" id="download">
         <div class="waitlist-card">
           <div>
-            <span class="eyebrow">Join the beta</span>
-            <h2>Want early access to WattsNear?</h2>
-            <p>Leave your email and we’ll use it as the placeholder intake flow until the real backend is ready.</p>
+            <span class="eyebrow">Get the app</span>
+            <h2>Free on the App Store.</h2>
+            <p>WattsNear is live for iPhone and CarPlay. No account required — install and start finding chargers.</p>
           </div>
 
-          <form id="waitlist-form" class="waitlist-form">
-            <label class="sr-only" for="email">Email address</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-            <button class="button primary" type="submit">Save my spot</button>
-          </form>
-          <p class="form-note" id="form-note" aria-live="polite"></p>
+          <div class="download-actions">
+            <a class="button primary app-store" href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">
+              <svg class="app-store-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.6 12.7c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.4 0-2.6.8-3.3 2-1.4 2.5-.4 6.1 1 8.1.7 1 1.5 2.1 2.5 2 1 0 1.4-.6 2.6-.6 1.2 0 1.5.6 2.6.6 1.1 0 1.8-1 2.4-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-3.1zm-1.9-5.7c.5-.7.9-1.6.8-2.5-.8 0-1.8.6-2.3 1.2-.5.6-1 1.5-.9 2.4.9.1 1.8-.4 2.4-1.1z"/></svg>
+              <span class="app-store-text"><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -264,12 +304,12 @@
     <footer class="footer">
       <div>
         <strong>WattsNear</strong>
-        <p>Find the best EV charger near you.</p>
+        <p>Closest &amp; cheapest EV chargers for iPhone and CarPlay.</p>
       </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
-        <a href="mailto:hello@wattsnear.example">Contact</a>
+        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">App Store</a>
       </div>
     </footer>
   </div>

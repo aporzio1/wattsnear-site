@@ -12,9 +12,6 @@ const fields = {
   annualCost: document.getElementById('annual-cost'),
   gasEquivalent: document.getElementById('gas-equivalent'),
   savings: document.getElementById('savings'),
-  waitlistForm: document.getElementById('waitlist-form'),
-  email: document.getElementById('email'),
-  formNote: document.getElementById('form-note'),
 };
 
 const money = new Intl.NumberFormat('en-US', {
@@ -73,18 +70,3 @@ function updateCalculator() {
   gas && gas.addEventListener(eventName, updateCalculator);
 });
 updateCalculator();
-
-if (fields.waitlistForm && fields.email && fields.formNote) {
-  const savedEmail = localStorage.getItem('wattsnear-waitlist-email');
-  if (savedEmail) fields.email.value = savedEmail;
-
-  fields.waitlistForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const email = fields.email.value.trim();
-    if (!email) return;
-    localStorage.setItem('wattsnear-waitlist-email', email);
-    fields.formNote.textContent = `Thanks — ${email} has been saved locally as a placeholder for the launch list.`;
-    fields.waitlistForm.reset();
-    fields.email.value = email;
-  });
-}

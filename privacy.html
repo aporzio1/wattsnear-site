@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — WattsNear</title>
-  <meta name="description" content="Privacy Policy for WattsNear.">
+  <meta name="description" content="WattsNear Privacy Policy: no servers, no analytics, no tracking. Location goes directly to the NREL API; favorites and sessions live on your device.">
+  <meta name="theme-color" content="#0f172a">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,11 +14,12 @@
     <header class="topbar" id="top">
       <a class="brand" href="index.html">
         <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M18 2L6 18h8l-1 12 13-18h-8l0-10Z" fill="currentColor"/></svg></span>
-        <span><strong>WattsNear</strong><span>Find the best charger near you</span></span>
+        <span><strong>WattsNear</strong><span>Closest &amp; cheapest EV chargers</span></span>
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html#features">Features</a>
-        <a href="index.html#waitlist">Join the beta</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" class="nav-cta" rel="noopener">Get the app</a>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span><span>Theme</span></button>
     </header>
@@ -26,20 +28,37 @@
       <section class="section">
         <div class="section-heading narrow">
           <span class="eyebrow">Privacy Policy</span>
-          <h1 style="max-width:none;font-size:clamp(2.3rem,4vw,3.6rem);margin-top:10px;">We keep this simple.</h1>
+          <h1 style="max-width:none;font-size:clamp(2.3rem,4vw,3.6rem);margin-top:10px;">We don't run servers, so we don't have your data.</h1>
+          <p class="muted">Last updated: April 14, 2026</p>
         </div>
         <div class="faq-list">
           <details open>
-            <summary>What data does this site collect?</summary>
-            <p>This first draft site doesn’t run a backend. If you use the waitlist form, your email is only saved locally in your browser as a placeholder.</p>
+            <summary>What WattsNear collects</summary>
+            <p>Nothing on our servers — WattsNear has no servers. Your device communicates directly with the U.S. Department of Energy's National Renewable Energy Laboratory (NREL) public charging-station API to fetch station data.</p>
           </details>
           <details>
-            <summary>Do you use analytics or tracking scripts?</summary>
-            <p>No third-party analytics are included in this version of the site.</p>
+            <summary>Location data</summary>
+            <p>Your device's location is used only to query nearby chargers and is sent to NREL's API with each request (latitude / longitude). We do not store, log, or forward your location. Location access is optional — you can deny it and still search by panning the map.</p>
           </details>
           <details>
-            <summary>Will this policy change?</summary>
-            <p>Yes, once the product adds real account or waitlist features, this policy should be updated to match the actual implementation.</p>
+            <summary>Favorites, history &amp; charging sessions</summary>
+            <p>Favorites, recent searches, avoided stations, vehicle profiles, and charging sessions are stored locally on your device. If you enable iCloud Sync in Settings, this data is stored in your private iCloud database (not accessible to us) and synced across your Apple devices. Disable sync or delete entries from within the app at any time.</p>
+          </details>
+          <details>
+            <summary>In-app purchases</summary>
+            <p>The "Remove Ads" in-app purchase is processed by Apple via StoreKit. WattsNear does not receive or store your payment information — Apple handles everything.</p>
+          </details>
+          <details>
+            <summary>Advertising</summary>
+            <p>The free version of WattsNear displays banner ads served by Google AdMob. Google may use non-personally-identifiable signals (such as device type and general location) to serve contextual ads. No cross-app tracking identifier (IDFA) is requested. The "Remove Ads" purchase strips all ads.</p>
+          </details>
+          <details>
+            <summary>Analytics &amp; tracking</summary>
+            <p>WattsNear does not include analytics SDKs, crash reporters, or any tracking that follows you across other apps or websites.</p>
+          </details>
+          <details>
+            <summary>Contact</summary>
+            <p>Questions? Reach out through the <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">App Store support link</a>.</p>
           </details>
         </div>
       </section>
@@ -50,7 +69,7 @@
         <strong>WattsNear</strong>
         <p><a href="terms.html">Terms</a> · <a href="index.html">Home</a></p>
       </div>
-      <div class="footer-links"><a href="mailto:hello@wattsnear.example">Contact</a></div>
+      <div class="footer-links"><a href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">App Store</a></div>
     </footer>
   </div>
   <script src="script.js"></script>

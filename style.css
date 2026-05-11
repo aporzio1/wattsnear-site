@@ -214,6 +214,60 @@ h1 {
   color: var(--text);
 }
 
+.button.app-store {
+  background: #000;
+  color: #fff;
+  padding: 0 22px;
+  min-height: 54px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  gap: 12px;
+}
+
+html[data-theme="dark"] .button.app-store {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 14px 30px rgba(255, 255, 255, 0.08);
+}
+
+.button.app-store:hover {
+  transform: translateY(-1px);
+}
+
+.app-store-logo {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+  text-align: left;
+}
+
+.app-store-text small {
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.app-store-text strong {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
 .metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
