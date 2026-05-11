@@ -48,7 +48,7 @@ function updateCalculator() {
   const gasPrice = Number(gas.value);
 
   const annualMiles = weeklyMiles * 52;
-  const annualKwh = annualMiles / milesPerKwh;
+  const annualKwh = milesPerKwh > 0 ? annualMiles / milesPerKwh : 0;
   const annualChargingCost = annualKwh * electricity;
   const annualGasGallons = annualMiles / 28;
   const annualGasCost = annualGasGallons * gasPrice;
