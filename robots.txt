@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wattsnear.aporzio.com/sitemap.xml
+Sitemap: https://wattsnear.com/sitemap.xml

@@ -1,6 +1,6 @@
 # WattsNear website
 
-Customer-facing marketing site for the [WattsNear](https://apps.apple.com/us/app/wattsnear/id6762151871) iPhone & CarPlay app, hosted on GitHub Pages at <https://aporzio1.github.io/wattsnear-site/>.
+Customer-facing marketing site for the [WattsNear](https://apps.apple.com/us/app/wattsnear/id6762151871) iPhone & CarPlay app. Hosted on GitHub Pages, served at <https://wattsnear.com/>.
 
 ## Files
 
@@ -14,10 +14,8 @@ Customer-facing marketing site for the [WattsNear](https://apps.apple.com/us/app
 
 ## Deploying to GitHub Pages
 
-1. Push `main`.
-2. Repo settings → Pages → source `main` / `/` → Save.
-3. After deploy, the site is live at the Pages URL above.
+Push to `main`. Pages config: source `main` / `/`, custom domain `wattsnear.com` (also see `CNAME`).
 
 ## Keeping legal copy in sync
 
-The canonical Privacy / Terms live in the WattsNear iOS repo under `WattsNear/web/privacy.html` and `WattsNear/web/terms.html` (deployed separately to `wattsnear.aporzio.com` for App Store Connect). When that copy changes, mirror the change here so the public marketing site and the App Store legal links don't drift.
+The canonical Privacy / Terms also live in the WattsNear iOS repo under `WattsNear/web/privacy.html` and `WattsNear/web/terms.html` (in-app mirrors). When the in-app copy changes, update `privacy.html` / `terms.html` here so the App Store legal links served from `wattsnear.com` don't drift.
