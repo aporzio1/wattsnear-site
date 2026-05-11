@@ -9,10 +9,12 @@
   <meta property="og:title" content="WattsNear — Find the closest, cheapest EV charger">
   <meta property="og:description" content="Find nearby chargers, compare cost per kWh, plan trips around your battery, and log sessions. iPhone + CarPlay. Free on the App Store.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aporzio1.github.io/wattsnear-site/">
+  <meta property="og:url" content="https://wattsnear.aporzio.com/">
+  <meta property="og:image" content="https://wattsnear.aporzio.com/screenshots/cheapest.webp">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://wattsnear.aporzio.com/screenshots/cheapest.webp">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://aporzio1.github.io/wattsnear-site/">
+  <link rel="canonical" href="https://wattsnear.aporzio.com/">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,8 +34,8 @@
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
         <a href="#carplay">CarPlay</a>
-        <a href="#calculator">Calculator</a>
         <a href="#faq">FAQ</a>
         <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" class="nav-cta" rel="noopener">Get the app</a>
       </nav>
@@ -79,44 +81,9 @@
           </div>
         </div>
 
-        <div class="hero-panel" aria-label="Example results">
-          <div class="panel-header">
-            <span class="pill">Example results</span>
-            <span class="muted">Sorted by cheapest</span>
-          </div>
-
-          <div class="station-list">
-            <article class="station-card featured">
-              <div>
-                <h2>Tesla Supercharger</h2>
-                <p>1.2 mi · 12 stalls · CCS &amp; NACS · 24/7</p>
-              </div>
-              <strong>$0.36 / kWh</strong>
-            </article>
-
-            <article class="station-card">
-              <div>
-                <h2>ChargePoint</h2>
-                <p>0.4 mi · 8 DC fast chargers · 24/7</p>
-              </div>
-              <strong>$0.41 / kWh</strong>
-            </article>
-
-            <article class="station-card">
-              <div>
-                <h2>EVgo</h2>
-                <p>0.8 mi · 4 DC fast chargers · covered</p>
-              </div>
-              <strong>$0.48 / kWh</strong>
-            </article>
-          </div>
-
-          <div class="panel-footer">
-            <div>
-              <span class="label">Filter</span>
-              <strong>Free charging · Network · Connector · Status</strong>
-            </div>
-            <a href="#features">See all filters</a>
+        <div class="hero-phone" aria-label="WattsNear sorted by cheapest">
+          <div class="phone-frame">
+            <img src="screenshots/cheapest.webp" alt="WattsNear app showing chargers sorted by cheapest price, including a free option" width="500" height="1084" loading="eager" decoding="async">
           </div>
         </div>
       </section>
@@ -169,6 +136,41 @@
             <h3>Optional iCloud sync</h3>
             <p>Favorites, history, vehicle profiles, and sessions sync through your private iCloud database. Opt-in, no third-party servers.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="section gallery" id="screens">
+        <div class="section-heading narrow">
+          <span class="eyebrow">See it in action</span>
+          <h2>What WattsNear looks like on your phone.</h2>
+          <p>Straight from the App Store — no mockups, no marketing renders.</p>
+        </div>
+
+        <div class="gallery-strip" role="list">
+          <figure role="listitem">
+            <div class="phone-frame"><img src="screenshots/welcome.webp" alt="WattsNear onboarding: Welcome screen highlighting closest chargers, cheapest prices, map view, and favorites" width="500" height="1084" loading="lazy" decoding="async"></div>
+            <figcaption>Quick intro on first launch</figcaption>
+          </figure>
+          <figure role="listitem">
+            <div class="phone-frame"><img src="screenshots/siri.webp" alt="WattsNear hands-free Siri shortcuts: find closest, find cheapest, search, log session" width="500" height="1084" loading="lazy" decoding="async"></div>
+            <figcaption>Hands-free Siri shortcuts</figcaption>
+          </figure>
+          <figure role="listitem">
+            <div class="phone-frame"><img src="screenshots/closest.webp" alt="Closest chargers list sorted by distance with network and connector badges" width="500" height="1084" loading="lazy" decoding="async"></div>
+            <figcaption>Closest chargers tab</figcaption>
+          </figure>
+          <figure role="listitem">
+            <div class="phone-frame"><img src="screenshots/cheapest.webp" alt="Cheapest chargers list with free-charging option highlighted" width="500" height="1084" loading="lazy" decoding="async"></div>
+            <figcaption>Cheapest chargers tab</figcaption>
+          </figure>
+          <figure role="listitem">
+            <div class="phone-frame"><img src="screenshots/map.webp" alt="Map view showing 200 charging stations across Cupertino with bolt-icon pins" width="500" height="1084" loading="lazy" decoding="async"></div>
+            <figcaption>Map with "search this area"</figcaption>
+          </figure>
+          <figure role="listitem">
+            <div class="phone-frame"><img src="screenshots/log-session.webp" alt="Log charging session screen: vehicle, station, date, energy in kWh, duration, and total cost" width="500" height="1084" loading="lazy" decoding="async"></div>
+            <figcaption>Log a charging session</figcaption>
+          </figure>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aporzio1.github.io/wattsnear-site/sitemap.xml
+Sitemap: https://wattsnear.aporzio.com/sitemap.xml
