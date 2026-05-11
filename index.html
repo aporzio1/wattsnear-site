@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WattsNear — Find the best EV charger near you</title>
+  <meta name="description" content="WattsNear helps EV drivers find the nearest charger, compare prices, and pick the best stop for the route ahead.">
+  <meta name="theme-color" content="#0f172a">
+  <meta property="og:title" content="WattsNear — Find the best EV charger near you">
+  <meta property="og:description" content="Find nearby chargers, compare estimated costs, and choose the best stop for your drive.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="WattsNear home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" role="img" aria-hidden="true">
+            <path d="M18 2L6 18h8l-1 12 13-18h-8l0-10Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span>
+          <strong>WattsNear</strong>
+          <span>Find the best charger near you</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist" class="nav-cta">Join the beta</a>
+      </nav>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+        <span>Theme</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Built for road trips, errands, and everyday charging</div>
+          <h1>Find the best EV charger near you — fast.</h1>
+          <p class="lede">
+            WattsNear helps drivers compare nearby charging options, estimate what they’ll pay,
+            and choose a stop that fits the route ahead. It’s a simple first draft today — and a
+            solid foundation for the full product.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#calculator">Try the cost calculator</a>
+            <a class="button secondary" href="#features">See what it does</a>
+          </div>
+
+          <div class="metrics" aria-label="Product highlights">
+            <article>
+              <strong>Nearest first</strong>
+              <span>See nearby chargers in seconds.</span>
+            </article>
+            <article>
+              <strong>Price-aware</strong>
+              <span>Compare estimated charging costs before you leave.</span>
+            </article>
+            <article>
+              <strong>Route-friendly</strong>
+              <span>Pick the stop that fits your drive, not just your map.</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Preview of nearby chargers">
+          <div class="panel-header">
+            <span class="pill">Live preview</span>
+            <span class="muted">Downtown Atlanta • 12:45 PM</span>
+          </div>
+
+          <div class="station-list">
+            <article class="station-card featured">
+              <div>
+                <h2>ChargePoint — Peachtree Center</h2>
+                <p>0.4 mi away • 8 fast chargers • 24/7 access</p>
+              </div>
+              <strong>$0.41 / kWh</strong>
+            </article>
+
+            <article class="station-card">
+              <div>
+                <h2>EVgo — Midtown Station</h2>
+                <p>0.8 mi away • 4 fast chargers • covered parking</p>
+              </div>
+              <strong>$0.48 / kWh</strong>
+            </article>
+
+            <article class="station-card">
+              <div>
+                <h2>Tesla Supercharger — Arts Center</h2>
+                <p>1.2 mi away • 12 stalls • route-aware navigation</p>
+              </div>
+              <strong>$0.36 / kWh</strong>
+            </article>
+          </div>
+
+          <div class="panel-footer">
+            <div>
+              <span class="label">Best value</span>
+              <strong>Save up to $11.20 per fill-up</strong>
+            </div>
+            <a href="#waitlist">Get updates</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="features">
+        <div class="section-heading">
+          <span class="eyebrow">Why WattsNear works</span>
+          <h2>Useful details without the clutter.</h2>
+          <p>We’re keeping the first draft focused: the things drivers actually need when they’re looking for a charge.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <div class="icon">⚡</div>
+            <h3>Nearest charger at a glance</h3>
+            <p>Search the area and instantly see the closest charging options with distance and access details.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">💸</div>
+            <h3>Estimated cost before you plug in</h3>
+            <p>Compare rough charging costs across stations so you can skip the expensive stop when you want to.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">🧭</div>
+            <h3>Route-aware planning</h3>
+            <p>Pick a charger that fits your trip, not just the nearest pin on the map.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">⭐</div>
+            <h3>Save favorites</h3>
+            <p>Keep a shortlist of chargers you trust for your commute, errands, and road trips.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow">
+        <div class="section-heading narrow">
+          <span class="eyebrow">How it works</span>
+          <h2>Three steps from “where should I stop?” to “plugged in.”</h2>
+        </div>
+
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Search near you</h3>
+            <p>Open WattsNear and see chargers by distance, cost, and convenience.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Compare the options</h3>
+            <p>Review speed, price, and access so you can choose the best fit for the moment.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Head straight there</h3>
+            <p>Use the charger that makes the most sense for your route and your budget.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section calculator" id="calculator">
+        <div class="section-heading narrow">
+          <span class="eyebrow">Quick estimate</span>
+          <h2>See what your electric miles could cost.</h2>
+          <p>Use this first-pass calculator to get a feel for the savings WattsNear can help you compare.</p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calculator-form">
+            <label>
+              Weekly driving distance
+              <input id="miles" type="range" min="50" max="600" step="10" value="220">
+              <span><strong id="miles-value">220</strong> miles / week</span>
+            </label>
+
+            <label>
+              Vehicle efficiency
+              <input id="efficiency" type="range" min="2.5" max="5.5" step="0.1" value="3.2">
+              <span><strong id="efficiency-value">3.2</strong> mi / kWh</span>
+            </label>
+
+            <label>
+              Charging price
+              <input id="price" type="range" min="0.15" max="0.85" step="0.01" value="0.39">
+              <span><strong id="price-value">$0.39</strong> / kWh</span>
+            </label>
+
+            <label>
+              Gas comparison price
+              <input id="gas" type="range" min="2.50" max="6.50" step="0.05" value="3.79">
+              <span><strong id="gas-value">$3.79</strong> / gallon</span>
+            </label>
+          </div>
+
+          <div class="calculator-results" aria-live="polite">
+            <div class="result-card accent">
+              <span>Estimated annual charging cost</span>
+              <strong id="annual-cost">$0</strong>
+            </div>
+            <div class="result-card">
+              <span>Estimated gas equivalent</span>
+              <strong id="gas-equivalent">$0</strong>
+            </div>
+            <div class="result-card">
+              <span>Potential annual savings</span>
+              <strong id="savings">$0</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="section-heading narrow">
+          <span class="eyebrow">FAQ</span>
+          <h2>Answers for the first draft.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary>Is this a live product?</summary>
+            <p>Not yet — this is the first web draft and a clear landing page for the WattsNear brand.</p>
+          </details>
+          <details>
+            <summary>What platform will WattsNear support?</summary>
+            <p>The app is currently positioned around iPhone and CarPlay, with the website acting as the public front door.</p>
+          </details>
+          <details>
+            <summary>Can I contact you today?</summary>
+            <p>Use the waitlist form below and the page will save your email locally as a placeholder for the next build step.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section waitlist" id="waitlist">
+        <div class="waitlist-card">
+          <div>
+            <span class="eyebrow">Join the beta</span>
+            <h2>Want early access to WattsNear?</h2>
+            <p>Leave your email and we’ll use it as the placeholder intake flow until the real backend is ready.</p>
+          </div>
+
+          <form id="waitlist-form" class="waitlist-form">
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="button primary" type="submit">Save my spot</button>
+          </form>
+          <p class="form-note" id="form-note" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>WattsNear</strong>
+        <p>Find the best EV charger near you.</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:hello@wattsnear.example">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
