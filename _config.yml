@@ -1,0 +1,31 @@
+title: WattsNear Blog
+description: EV charging tips, savings calculators, and route-planning guides from the team behind WattsNear.
+url: https://wattsnear.com
+author:
+  name: Andrew Porzio
+  url: https://wattsnear.com
+twitter:
+  username: ""
+  card: summary_large_image
+logo: /favicon.svg
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Pretty URLs for blog posts: /blog/<slug>/
+permalink: /blog/:slug/
+
+# Don't run Jekyll on the polished marketing pages — they have no front
+# matter and stay as plain static files. Keep blog/_posts/_layouts dynamic.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .DS_Store
+
+# Markdown engine + syntax highlighter (kramdown is GitHub Pages default;
+# explicit so future readers know what's in play).
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge

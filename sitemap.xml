@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://wattsnear.com/</loc><lastmod>2026-05-11</lastmod><priority>1.0</priority></url>
+  <url><loc>https://wattsnear.com/</loc><lastmod>2026-05-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://wattsnear.com/blog/</loc><lastmod>2026-05-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wattsnear.com/blog/welcome-to-the-wattsnear-blog/</loc><lastmod>2026-05-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://wattsnear.com/privacy.html</loc><lastmod>2026-05-11</lastmod><priority>0.5</priority></url>
   <url><loc>https://wattsnear.com/terms.html</loc><lastmod>2026-05-11</lastmod><priority>0.5</priority></url>
 </urlset>
