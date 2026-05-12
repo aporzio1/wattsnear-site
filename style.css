@@ -695,24 +695,9 @@ summary:focus-visible {
   line-height: 1.75;
 }
 
-/* Constrain text-bearing elements to a comfortable ~70ch reading column.
-   Images, code blocks, and tables stay full-width so they fill the section
-   panel — the "narrow text, wide media" pattern most blogs use. */
-.post-body > p,
-.post-body > ul,
-.post-body > ol,
-.post-body > blockquote,
-.post-body > h2,
-.post-body > h3,
-.post-body > h4 {
-  max-width: 70ch;
-}
-
-/* Kramdown wraps standalone images in <p>. Let those wrappers (and the
-   image inside) break out to the full content width, and center the image
-   when it doesn't quite fill the row. */
+/* Center standalone images that are smaller than the column so they
+   don't sit awkwardly left-aligned. Full-width hero images just fill. */
 .post-body > p:has(> img:only-child) {
-  max-width: none;
   text-align: center;
 }
 
