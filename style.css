@@ -290,51 +290,27 @@ h1 {
   color: var(--text);
 }
 
-.button.app-store {
-  background: #000;
-  color: #fff;
-  padding: 0 22px;
-  min-height: 54px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
-  gap: 12px;
+/* Apple's official "Download on the App Store" badge. Apple's marketing
+   guidelines require the badge be used as-is (no recolor, no rebuild) and
+   at a minimum 40pt / 40px height for web. The SVG asset is the unmodified
+   file from developer.apple.com/assets/elements/badges/. */
+.app-store-badge {
+  display: inline-block;
+  text-decoration: none;
+  /* Apple guideline §3.1: clear space around the badge equal to ≥1/10 of
+     the badge's height (≈5px at our 54px display height). */
+  padding: 4px;
+  transition: transform 0.18s ease;
 }
 
-html[data-theme="dark"] .button.app-store {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 14px 30px rgba(255, 255, 255, 0.08);
-}
-
-.button.app-store:hover {
+.app-store-badge:hover {
   transform: translateY(-1px);
 }
 
-.app-store-logo {
-  width: 26px;
-  height: 26px;
-  flex: 0 0 auto;
-}
-
-.app-store-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.05;
-  text-align: left;
-}
-
-.app-store-text small {
-  font-size: 0.66rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  font-weight: 500;
-}
-
-.app-store-text strong {
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
-  font-weight: 600;
+.app-store-badge img {
+  display: block;
+  height: 54px;
+  width: auto; /* preserve Apple's 119.66:40 aspect ratio */
 }
 
 .download-actions {

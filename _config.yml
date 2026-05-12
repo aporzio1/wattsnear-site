@@ -16,6 +16,13 @@ plugins:
 # Pretty URLs for blog posts: /blog/<slug>/
 permalink: /blog/:slug/
 
+# Render future-dated posts immediately. GitHub Pages' Jekyll runs on a UTC
+# clock; a post dated `2026-05-12 16:00:00 -0400` (= 20:00 UTC) would not be
+# published if the build kicks off before that UTC moment. Setting
+# `future: true` removes the timing trap entirely so newly-pushed posts go
+# live as soon as Jekyll builds, regardless of the front-matter timestamp.
+future: true
+
 # Don't run Jekyll on the polished marketing pages — they have no front
 # matter and stay as plain static files. Keep blog/_posts/_layouts dynamic.
 exclude:

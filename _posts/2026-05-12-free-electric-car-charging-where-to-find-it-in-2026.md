@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Free Electric Car Charging: Where to Find It in 2026"
-date: 2026-05-12
+date: 2026-05-12 08:00:00 -0400
 author: Andrew Porzio
 summary: "Free EV charging is more common than most drivers realize, but it doesn't live where people expect. Here's where to actually find it, what to skip, and the fastest way to surface it before you pull in."
 read_time: 6

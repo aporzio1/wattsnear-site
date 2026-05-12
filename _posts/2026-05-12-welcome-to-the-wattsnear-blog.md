@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to the WattsNear Blog"
-date: 2026-05-12
+date: 2026-05-12 06:00:00 -0400
 author: Andrew Porzio
 summary: "A new home for EV-charging guides, city-by-city cheapest-charger roundups, and practical posts about getting the most out of WattsNear on iPhone and CarPlay."
 read_time: 1
