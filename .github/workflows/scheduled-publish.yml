@@ -1,0 +1,51 @@
+name: Scheduled rebuild for future-dated posts
+
+# Jekyll's `future: false` (see _config.yml) excludes any post whose
+# `date:` is still in the future when Jekyll builds. GitHub Pages only
+# rebuilds when a commit lands on `main` — so without something kicking
+# the build periodically, a post dated 2026-06-01 would never publish on
+# its own when the date arrives.
+#
+# This workflow pushes a single empty commit on a schedule, which triggers
+# the standard Pages rebuild. Any post whose date has now passed gets
+# picked up and published.
+#
+# Cron is in UTC. 13:00 UTC = 9 AM EDT (morning slot for posts dated
+# earlier that day) and 21:00 UTC = 5 PM EDT (afternoon slot). Two runs
+# per day = ~60 empty commits per month — chatty but manageable, and
+# they're tagged `chore: scheduled rebuild` so they filter out cleanly
+# from `git log` if you want a content-only history view:
+#
+#   git log --invert-grep --grep="scheduled rebuild"
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 9 AM EDT / 10 AM EST
+    - cron: "0 21 * * *"   # 5 PM EDT / 6 PM EST
+  workflow_dispatch:        # also runnable on demand from the Actions tab
+
+concurrency:
+  group: scheduled-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Push an empty commit to trigger the Pages rebuild
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub Actions"
+          git commit --allow-empty -m "chore: scheduled rebuild for future-dated posts
+
+          Triggered by .github/workflows/scheduled-publish.yml so Jekyll
+          picks up any blog post whose front-matter date has now passed."
+          git push

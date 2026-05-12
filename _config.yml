@@ -21,7 +21,7 @@ permalink: /blog/:slug/
 # published if the build kicks off before that UTC moment. Setting
 # `future: true` removes the timing trap entirely so newly-pushed posts go
 # live as soon as Jekyll builds, regardless of the front-matter timestamp.
-future: true
+future: false
 
 # Don't run Jekyll on the polished marketing pages — they have no front
 # matter and stay as plain static files. Keep blog/_posts/_layouts dynamic.
