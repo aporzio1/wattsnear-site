@@ -601,6 +601,11 @@ summary:focus-visible {
     align-items: flex-start;
   }
 
+  .topbar {
+    position: static;
+    top: auto;
+  }
+
   .nav-links {
     justify-content: flex-start;
     gap: 14px;
