@@ -1,0 +1,53 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://wattsnear.com/#org",
+      "name": "WattsNear",
+      "url": "https://wattsnear.com/",
+      "logo": "https://wattsnear.com/favicon.svg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wattsnear.com/#website",
+      "url": "https://wattsnear.com/",
+      "name": "WattsNear",
+      "publisher": { "@id": "https://wattsnear.com/#org" },
+      "inLanguage": "en-US"
+    }{%- if page.homepage -%},
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://wattsnear.com/#app",
+      "name": "WattsNear",
+      "operatingSystem": "iOS 18, CarPlay",
+      "applicationCategory": "NavigationApplication",
+      "url": "https://apps.apple.com/us/app/wattsnear/id6762151871",
+      "publisher": { "@id": "https://wattsnear.com/#org" },
+      "description": "Find the closest and cheapest EV chargers from the U.S. DOE NREL database. Free on iPhone and CarPlay. No account, no tracking.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in site.data.faq -%}
+        {
+          "@type": "Question",
+          "name": {{ item.q | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | strip_newlines | jsonify }}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>

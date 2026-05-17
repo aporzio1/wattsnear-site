@@ -1,30 +1,31 @@
 ---
 layout: default
 ---
-<article class="section post">
-  <header class="post-header">
-    <span class="eyebrow">WattsNear Blog</span>
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      {%- if page.author %} · By {{ page.author }}{%- endif -%}
-      {%- if page.read_time %} · {{ page.read_time }} min read{%- endif -%}
-    </p>
-    {%- if page.summary %}
-    <p class="post-summary">{{ page.summary }}</p>
-    {%- endif -%}
-  </header>
+<article class="post-article">
+  <div class="container container--narrow">
+    <header class="post-header">
+      <p class="eyebrow"><a href="/blog/">WattsNear Blog</a></p>
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {%- if page.author %} · By {{ page.author }}{%- endif -%}
+        {%- if page.read_time %} · {{ page.read_time }} min read{%- endif -%}
+      </p>
+      {%- if page.summary %}
+      <p class="post-summary">{{ page.summary }}</p>
+      {%- endif -%}
+    </header>
 
-  <div class="post-body">
-    {{ content }}
-  </div>
-
-  <footer class="post-footer">
-    <div class="post-cta">
-      <a class="app-store-badge" href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener" aria-label="Download WattsNear on the App Store">
-        <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="160" height="54" />
-      </a>
+    <div class="post-body">
+      {{ content }}
     </div>
-    <p class="post-back"><a href="/blog/">← Back to all posts</a></p>
-  </footer>
+
+    <footer class="post-footer">
+      <div class="post-cta">
+        <p class="post-cta-copy">Find the closest and cheapest EV chargers near you.</p>
+        {% include app-store-cta.html size="md" %}
+      </div>
+      <p class="post-back"><a href="/blog/">&larr; All posts</a></p>
+    </footer>
+  </div>
 </article>

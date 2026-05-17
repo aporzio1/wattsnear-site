@@ -1,0 +1,58 @@
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-brand">
+      <a class="brand" href="/" aria-label="WattsNear home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" focusable="false">
+            <path d="M14 2 4 14h6l-1 8 11-14h-7V2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">WattsNear</span>
+      </a>
+      <p class="footer-tag">Made for EV drivers. Not for ad networks.</p>
+      {% include app-store-cta.html size="sm" %}
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h3>Product</h3>
+        <ul>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#carplay">CarPlay</a></li>
+          <li><a href="/#save">Save money</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/feed.xml">RSS feed</a></li>
+          <li><a href="https://afdc.energy.gov/stations/" rel="noopener">NREL station locator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get the app</h3>
+        <ul>
+          <li><a href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">Open in App Store</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer-fineprint">
+    <p>&copy; {{ "now" | date: "%Y" }} WattsNear. All rights reserved.</p>
+    <p class="footer-trademark">
+      App Store and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+      iPhone, CarPlay, Siri, and iCloud are trademarks of Apple Inc. WattsNear is an independent app and
+      is not affiliated with or endorsed by Apple Inc.
+    </p>
+  </div>
+</footer>
