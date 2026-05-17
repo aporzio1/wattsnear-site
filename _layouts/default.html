@@ -2,61 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} — WattsNear{% else %}WattsNear Blog{% endif %}</title>
-  <meta name="theme-color" content="#0f172a">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="alternate" type="application/rss+xml" title="WattsNear Blog" href="/feed.xml">
-  {%- seo -%}
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  {% include head-meta.html %}
+  {% include structured-data.html %}
+  {%- if jekyll.environment != "production" -%}{%- comment -%}no-op{%- endcomment -%}{%- endif -%}
+  {% seo title=false %}
 </head>
-<body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="WattsNear home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" role="img" aria-hidden="true">
-            <path d="M18 2L6 18h8l-1 12 13-18h-8l0-10Z" fill="currentColor"/>
-          </svg>
-        </span>
-        <span>
-          <strong>WattsNear</strong>
-          <span>Closest &amp; cheapest EV chargers</span>
-        </span>
-      </a>
+<body{% if page.homepage %} class="page-home"{% endif %}>
+  {% include topbar.html %}
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="/#features">Features</a>
-        <a href="/#screens">Screens</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#faq">FAQ</a>
-        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" class="nav-cta" rel="noopener">Get the app</a>
-      </nav>
+  <main id="main">
+    {{ content }}
+  </main>
 
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
-        <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-        <span>Theme</span>
-      </button>
-    </header>
+  {% include footer.html %}
+  {% include sticky-cta.html %}
 
-    <main>
-      {{ content }}
-    </main>
-
-    <footer class="footer">
-      <div>
-        <strong>WattsNear</strong>
-        <p>Closest &amp; cheapest EV chargers for iPhone and CarPlay.</p>
-      </div>
-      <div class="footer-links">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/blog/">Blog</a>
-        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">App Store</a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="/script.js"></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>

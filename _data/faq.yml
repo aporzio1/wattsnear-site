@@ -1,0 +1,57 @@
+- q: How much does WattsNear cost?
+  a: >-
+    Free on the App Store. The free version shows a banner ad; a one-time
+    "Remove Ads" in-app purchase strips them out forever. No subscriptions, no
+    free trial gotchas.
+
+- q: Do I need an account?
+  a: >-
+    No. WattsNear has no sign-up, no email gate, and no servers. Install the
+    app and you're already in.
+
+- q: What devices does WattsNear support?
+  a: >-
+    iPhone running iOS 18 or later, plus CarPlay. A home-screen widget and App
+    Intents (Siri / Shortcuts / Spotlight) are included.
+
+- q: Where does the station data come from?
+  a: >-
+    The U.S. Department of Energy's NREL Alternative Fueling Station
+    Locator — the same public dataset many EV apps rely on. Station info is
+    provided by the networks themselves and may occasionally be out of date.
+
+- q: How is price per kWh estimated?
+  a: >-
+    NREL exposes a free-text pricing field that each network fills in
+    differently. WattsNear parses common formats (per kWh, per minute, free,
+    member-only rates) into a single rough estimate so the "cheapest" sort is
+    meaningful. Always verify at the station.
+
+- q: Does WattsNear collect or share my location?
+  a: >-
+    No. Your device sends its coordinates directly to NREL's public API to find
+    nearby stations — we never see or store them. Favorites, history, and
+    sessions live on your device, with optional sync through your private
+    iCloud database.
+
+- q: Does it work without cell service?
+  a: >-
+    Recent search results stay cached, so you'll see the last list you loaded.
+    Live station data and pricing require connectivity to NREL.
+
+- q: Does it include Tesla Superchargers?
+  a: >-
+    Yes. NREL now includes Tesla destinations and Superchargers, and WattsNear
+    surfaces them alongside CCS, NACS, CHAdeMO, and J1772 stations.
+
+- q: Can I filter to only free chargers?
+  a: >-
+    Yes — one toggle in the filter sheet. There are also filters for connector
+    type, network, search radius, and station status.
+
+- q: How is WattsNear different from other EV charging apps?
+  a: >-
+    Most charging apps are built by a single network for their own stations,
+    or revolve around social features and ad-supported routing. WattsNear is
+    the fastest path to the only two questions you have at the wheel: what's
+    closest, and what's cheapest. No login, no tracking, every network.

@@ -1,320 +1,422 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WattsNear — Find the closest, cheapest EV charger</title>
-  <meta name="description" content="WattsNear helps EV drivers find the closest and most affordable charging stations, plan trips around battery range, and log sessions. iPhone, CarPlay, Siri, and home-screen widget. Free on the App Store.">
-  <meta name="theme-color" content="#0f172a">
-  <meta property="og:title" content="WattsNear — Find the closest, cheapest EV charger">
-  <meta property="og:description" content="Find nearby chargers, compare cost per kWh, plan trips around your battery, and log sessions. iPhone + CarPlay. Free on the App Store.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wattsnear.com/">
-  <meta property="og:image" content="https://wattsnear.com/screenshots/cheapest.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://wattsnear.com/screenshots/cheapest.webp">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://wattsnear.com/">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="WattsNear home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" role="img" aria-hidden="true">
-            <path d="M18 2L6 18h8l-1 12 13-18h-8l0-10Z" fill="currentColor"/>
-          </svg>
-        </span>
-        <span>
-          <strong>WattsNear</strong>
-          <span>Closest &amp; cheapest EV chargers</span>
-        </span>
-      </a>
+---
+layout: default
+homepage: true
+title: "Find the closest, cheapest EV charger for iPhone & CarPlay"
+description: "WattsNear is the fastest way to find the closest and cheapest EV chargers near you. Live U.S. DOE NREL data. Free for iPhone & CarPlay. No account, no tracking."
+permalink: /
+---
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#screens">Screens</a>
-        <a href="#carplay">CarPlay</a>
-        <a href="/blog/">Blog</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" class="nav-cta" rel="noopener">Get the app</a>
-      </nav>
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> For iPhone &amp; CarPlay · Free</p>
+      <h1 id="hero-h1" class="display">Charge for less.<br><span class="text-accent-gradient">Drive farther.</span></h1>
+      <p class="lede">
+        WattsNear shows you the closest and cheapest EV chargers — live from the
+        U.S. Department of Energy. Free on iPhone and CarPlay. No account, no tracking.
+      </p>
 
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
-        <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-        <span>Theme</span>
-      </button>
+      <div class="hero-actions">
+        {% include app-store-cta.html size="lg" %}
+        <a class="btn btn--ghost" href="#features">
+          See how it works
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <ul class="hero-chips" aria-label="Why people choose WattsNear">
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> No account</li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> No tracking</li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> NREL station data</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" aria-hidden="false">
+      <div class="hero-phone hero-phone--main">
+        <img src="/screenshots/cheapest.webp" alt="WattsNear app sorted by cheapest cost per kWh, with a free charger highlighted at the top" width="500" height="1084" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero-phone hero-phone--alt" aria-hidden="true">
+        <img src="/screenshots/closest.webp" alt="" width="500" height="1084" loading="lazy" decoding="async">
+      </div>
+      <div class="hero-blob hero-blob--a" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob--b" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip" aria-label="What powers WattsNear">
+  <div class="container">
+    <ul class="trust-list">
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.6 4.4L18 21l-6-4-6 4 1.6-7.6L2 9h7l3-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Powered by U.S. DOE NREL</li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 2 4 14h6l-1 8 11-14h-7V2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> 60,000+ stations</li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="14" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M17 10h3v4h-3" stroke="currentColor" stroke-width="1.6"/></svg> Every connector</li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="1.2" fill="currentColor"/></svg> iOS 18 &amp; CarPlay</li>
+    </ul>
+  </div>
+</section>
+
+<section class="manifesto" aria-labelledby="manifesto-h2">
+  <div class="container manifesto-grid">
+    <div class="reveal">
+      <p class="eyebrow">Built for drivers</p>
+      <h2 id="manifesto-h2">Most charging apps were built for networks. We built ours for you.</h2>
+      <p class="lede">
+        One free app. Every network. Every charger. Sorted the way drivers actually think:
+        how close is it, and how much will it cost?
+      </p>
+    </div>
+
+    <div class="compare-card reveal">
+      <table class="compare-table" aria-label="WattsNear compared to typical EV charging apps">
+        <thead>
+          <tr>
+            <th scope="col" class="compare-blank"></th>
+            <th scope="col">Typical EV apps</th>
+            <th scope="col" class="compare-us">WattsNear</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Account required</th>
+            <td><span class="compare-x">Email &amp; password</span></td>
+            <td class="compare-us"><span class="compare-check">No sign-up</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Networks</th>
+            <td><span class="compare-x">One network only</span></td>
+            <td class="compare-us"><span class="compare-check">Every network</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Your location</th>
+            <td><span class="compare-x">Sold to ad networks</span></td>
+            <td class="compare-us"><span class="compare-check">Stays on your phone</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Finding a charger</th>
+            <td><span class="compare-x">Cluttered map first</span></td>
+            <td class="compare-us"><span class="compare-check">Closest &amp; cheapest, one tap</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Price</th>
+            <td><span class="compare-x">Paid pro tier</span></td>
+            <td class="compare-us"><span class="compare-check">Free forever</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features" aria-labelledby="features-h2">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">Features</p>
+      <h2 id="features-h2">Everything an EV driver actually needs.</h2>
+      <p class="section-sub">Built on live NREL data — the same charging-station database the U.S. Department of Energy maintains. No accounts, no servers, no tracking.</p>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <div class="eyebrow">For iPhone &amp; CarPlay · Free</div>
-          <h1>Find the closest, cheapest EV charger — fast.</h1>
-          <p class="lede">
-            WattsNear shows you nearby charging stations from the U.S. Department of Energy's
-            NREL database, sorted by distance or price per kWh. Plan trips around your battery
-            range, log charging sessions, and use it hands-free with Siri or CarPlay.
-          </p>
-
-          <div class="hero-actions">
-            <a class="app-store-badge" href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener" aria-label="Download WattsNear on the App Store">
-              <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="160" height="54" />
-            </a>
-            <a class="button secondary" href="#features">See what it does</a>
-          </div>
-
-          <div class="metrics" aria-label="Product highlights">
-            <article>
-              <strong>Closest first</strong>
-              <span>Sort live NREL station data by distance from where you are.</span>
-            </article>
-            <article>
-              <strong>Cheapest first</strong>
-              <span>See estimated cost per kWh and pick the better deal.</span>
-            </article>
-            <article>
-              <strong>CarPlay-ready</strong>
-              <span>Browse nearest, cheapest, and favorites from your dash.</span>
-            </article>
-          </div>
+    <div class="feature-grid">
+      <article class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="6" width="11" height="20" rx="3" stroke="currentColor" stroke-width="1.6"/><rect x="17" y="6" width="11" height="20" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 12h5M7 16h5M20 12h5M20 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
+        <h3>Closest &amp; cheapest, side&nbsp;by&nbsp;side</h3>
+        <p>Two clean tabs answer the only two questions you have at the wheel.</p>
+      </article>
 
-        <div class="hero-phone" aria-label="WattsNear sorted by cheapest">
-          <div class="phone-frame">
-            <img src="screenshots/cheapest.webp" alt="WattsNear app showing chargers sorted by cheapest price, including a free option" width="500" height="1084" loading="eager" decoding="async">
-          </div>
+      <article class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16c0-6 5-11 11-11s11 5 11 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16" cy="20" r="1.8" fill="currentColor"/><path d="M16 20v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 24h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-      </section>
+        <h3>Real prices, parsed</h3>
+        <p>NREL's messy pricing field decoded into a single $/kWh estimate you can sort by.</p>
+      </article>
 
-      <section class="section features" id="features">
-        <div class="section-heading">
-          <span class="eyebrow">What's inside</span>
-          <h2>Everything an EV driver actually needs.</h2>
-          <p>Built on live NREL data — the same charging-station database the U.S. Department of Energy maintains. No accounts, no servers, no tracking.</p>
+      <article class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5" y="10" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="25" y="14" width="2.5" height="4" rx="1" fill="currentColor"/><rect x="8" y="13" width="11" height="6" rx="1.5" fill="currentColor"/></svg>
         </div>
+        <h3>Trip range planner</h3>
+        <p>Tell WattsNear your battery and efficiency — see only the chargers you can actually reach.</p>
+      </article>
 
-        <div class="card-grid">
-          <article class="feature-card">
-            <div class="icon">⚡</div>
-            <h3>Closest &amp; cheapest tabs</h3>
-            <p>Two quick-access lists answer the only two questions that matter when you need a charge.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">💸</div>
-            <h3>Price-aware sorting</h3>
-            <p>Estimated cost per kWh is parsed from the NREL pricing field so you can compare before you plug in.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">🧭</div>
-            <h3>Trip range planner</h3>
-            <p>Enter your battery, efficiency, and target charge level to see which chargers are reachable on your current state of charge.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">⭐</div>
-            <h3>Favorites &amp; avoid list</h3>
-            <p>Star the chargers you trust and hide the ones you don't. Both lists sync across your Apple devices.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">🗺️</div>
-            <h3>Map with "search this area"</h3>
-            <p>Pan anywhere — destination, vacation, a friend's house — and refresh results from the new center point.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">🔌</div>
-            <h3>Connector &amp; network filters</h3>
-            <p>NACS, CCS, CHAdeMO, J1772, Tesla — and any network from Tesla and Electrify America down to municipal one-offs.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">📒</div>
-            <h3>Session log</h3>
-            <p>Record what you paid, how many kWh you took on, and where — so you can see your real-world charging cost over time.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">☁️</div>
-            <h3>Optional iCloud sync</h3>
-            <p>Favorites, history, vehicle profiles, and sessions sync through your private iCloud database. Opt-in, no third-party servers.</p>
-          </article>
+      <article class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M9 25h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="11" cy="14" r="2" fill="currentColor"/><path d="M16 11v6M19 11l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-      </section>
+        <h3>CarPlay, Siri &amp; Widget</h3>
+        <p>On the dash, in the home screen, hands-free. Drives like a built-in app.</p>
+      </article>
 
-      <section class="section gallery" id="screens">
-        <div class="section-heading narrow">
-          <span class="eyebrow">See it in action</span>
-          <h2>What WattsNear looks like on your phone.</h2>
-          <p>Straight from the App Store — no mockups, no marketing renders.</p>
+      <article class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5v4M21 5v4M11 23v4M21 23v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="8" y="9" width="16" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M14 14h4M14 18h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
+        <h3>Every connector, every network</h3>
+        <p>NACS, CCS, CHAdeMO, J1772, Tesla. Filter by what your car actually plugs into.</p>
+      </article>
 
-        <div class="gallery-strip" role="list">
-          <figure role="listitem">
-            <div class="phone-frame"><img src="screenshots/welcome.webp" alt="WattsNear onboarding: Welcome screen highlighting closest chargers, cheapest prices, map view, and favorites" width="500" height="1084" loading="lazy" decoding="async"></div>
-            <figcaption>Quick intro on first launch</figcaption>
-          </figure>
-          <figure role="listitem">
-            <div class="phone-frame"><img src="screenshots/siri.webp" alt="WattsNear hands-free Siri shortcuts: find closest, find cheapest, search, log session" width="500" height="1084" loading="lazy" decoding="async"></div>
-            <figcaption>Hands-free Siri shortcuts</figcaption>
-          </figure>
-          <figure role="listitem">
-            <div class="phone-frame"><img src="screenshots/closest.webp" alt="Closest chargers list sorted by distance with network and connector badges" width="500" height="1084" loading="lazy" decoding="async"></div>
-            <figcaption>Closest chargers tab</figcaption>
-          </figure>
-          <figure role="listitem">
-            <div class="phone-frame"><img src="screenshots/cheapest.webp" alt="Cheapest chargers list with free-charging option highlighted" width="500" height="1084" loading="lazy" decoding="async"></div>
-            <figcaption>Cheapest chargers tab</figcaption>
-          </figure>
-          <figure role="listitem">
-            <div class="phone-frame"><img src="screenshots/map.webp" alt="Map view showing 200 charging stations across Cupertino with bolt-icon pins" width="500" height="1084" loading="lazy" decoding="async"></div>
-            <figcaption>Map with "search this area"</figcaption>
-          </figure>
-          <figure role="listitem">
-            <div class="phone-frame"><img src="screenshots/log-session.webp" alt="Log charging session screen: vehicle, station, date, energy in kWh, duration, and total cost" width="500" height="1084" loading="lazy" decoding="async"></div>
-            <figcaption>Log a charging session</figcaption>
-          </figure>
+      <article class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="8" y="14" width="16" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 14v-3a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16" cy="20" r="1.6" fill="currentColor"/></svg>
         </div>
-      </section>
+        <h3>Private by design</h3>
+        <p>No account, no servers, no tracking. Optional iCloud sync keeps your favorites with you.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-      <section class="section workflow" id="carplay">
-        <div class="section-heading narrow">
-          <span class="eyebrow">CarPlay, Siri &amp; Widget</span>
-          <h2>Built for the driver's seat, not just the home screen.</h2>
-          <p>WattsNear shows up where you actually use it — on your dashboard, from Siri, and as a tap-and-go widget.</p>
-        </div>
+<section class="carplay" id="carplay" aria-labelledby="carplay-h2">
+  <div class="container">
+    <header class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--light">CarPlay · Siri · Widget</p>
+      <h2 id="carplay-h2">Made for the driver's seat.</h2>
+      <p class="section-sub section-sub--light">Four tabs on your dashboard. Nearest, cheapest, favorites, search. Filters carry over from your phone. Siri finds chargers without unlocking it.</p>
+    </header>
 
-        <div class="steps">
-          <article>
-            <span>CarPlay</span>
-            <h3>Four tabs at a glance</h3>
-            <p>Nearest, Cheapest, Favorites, and Search — all sortable on your car's display. Filters carry over from your phone.</p>
-          </article>
-          <article>
-            <span>Siri</span>
-            <h3>Hands-free shortcuts</h3>
-            <p>"Hey Siri, find a charger" pulls up nearest stations through App Intents. Add custom shortcuts in the Shortcuts app.</p>
-          </article>
-          <article>
-            <span>Widget</span>
-            <h3>Closest charger on the home screen</h3>
-            <p>The home-screen widget keeps the nearest charger one tap away. Tap to launch straight into directions.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section calculator" id="calculator">
-        <div class="section-heading narrow">
-          <span class="eyebrow">EV vs. gas</span>
-          <h2>See what your electric miles really cost.</h2>
-          <p>Tweak the sliders to compare a full year of electric driving against the equivalent gallons of gas. The in-app trip-range planner uses the same kind of math, scaled to your actual vehicle.</p>
-        </div>
-
-        <div class="calculator-card">
-          <div class="calculator-form">
-            <label>
-              Weekly driving distance
-              <input id="miles" type="range" min="0" max="600" step="10" value="0">
-              <span><strong id="miles-value">0</strong> miles / week</span>
-            </label>
-
-            <label>
-              Vehicle efficiency
-              <input id="efficiency" type="range" min="0" max="5.5" step="0.1" value="0">
-              <span><strong id="efficiency-value">0.0</strong> mi / kWh</span>
-            </label>
-
-            <label>
-              Charging price
-              <input id="price" type="range" min="0" max="0.85" step="0.01" value="0">
-              <span><strong id="price-value">$0.00</strong> / kWh</span>
-            </label>
-
-            <label>
-              Gas comparison price
-              <input id="gas" type="range" min="0" max="6.50" step="0.05" value="0">
-              <span><strong id="gas-value">$0.00</strong> / gallon</span>
-            </label>
-          </div>
-
-          <div class="calculator-results" aria-live="polite">
-            <div class="result-card accent">
-              <span>Estimated annual charging cost</span>
-              <strong id="annual-cost">$0</strong>
-            </div>
-            <div class="result-card">
-              <span>Estimated gas equivalent</span>
-              <strong id="gas-equivalent">$0</strong>
-            </div>
-            <div class="result-card">
-              <span>Potential annual savings</span>
-              <strong id="savings">$0</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section faq" id="faq">
-        <div class="section-heading narrow">
-          <span class="eyebrow">FAQ</span>
-          <h2>Common questions.</h2>
-        </div>
-
-        <div class="faq-list">
-          <details open>
-            <summary>How much does WattsNear cost?</summary>
-            <p>Free on the App Store. The free version shows a banner ad; a one-time "Remove Ads" in-app purchase strips them out forever. No subscriptions.</p>
-          </details>
-          <details>
-            <summary>What devices does WattsNear support?</summary>
-            <p>iPhone running iOS 18 or later, plus CarPlay. A home-screen widget and App Intents (Siri / Shortcuts / Spotlight) are included.</p>
-          </details>
-          <details>
-            <summary>Where does the station data come from?</summary>
-            <p>The U.S. Department of Energy's NREL Alternative Fueling Station Locator — the same public dataset many EV apps rely on. Station info is provided by the networks themselves and may occasionally be out of date.</p>
-          </details>
-          <details>
-            <summary>Do you collect my location or browsing data?</summary>
-            <p>No. WattsNear has no backend. Your device sends its coordinates directly to the NREL API to find nearby stations; we never see or store them. Favorites, history, and sessions live only on your device, with optional sync through your private iCloud database.</p>
-          </details>
-          <details>
-            <summary>How is the price per kWh estimated?</summary>
-            <p>NREL exposes a free-text pricing field that each network fills in differently. WattsNear parses common formats (per kWh, per minute, free, member-only rates) into a single rough estimate so the "cheapest" sort is meaningful. Always verify at the station.</p>
-          </details>
-          <details>
-            <summary>Can I filter to only free chargers?</summary>
-            <p>Yes — one toggle in the filter sheet. There are also filters for connector type (NACS, CCS, CHAdeMO, J1772, Tesla), network, search radius, and station status.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="section waitlist" id="download">
-        <div class="waitlist-card">
-          <div>
-            <span class="eyebrow">Get the app</span>
-            <h2>Free on the App Store.</h2>
-            <p>WattsNear is live for iPhone and CarPlay. No account required — install and start finding chargers.</p>
-          </div>
-
-          <div class="download-actions">
-            <a class="app-store-badge" href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener" aria-label="Download WattsNear on the App Store">
-              <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="160" height="54" />
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div>
-        <strong>WattsNear</strong>
-        <p>Closest &amp; cheapest EV chargers for iPhone and CarPlay.</p>
+    <div class="carplay-stage reveal">
+      <div class="dash-frame" role="img" aria-label="WattsNear running on a CarPlay dashboard with Nearest, Cheapest, Favorites, and Search tabs">
+        <svg viewBox="0 0 760 380" class="dash-svg" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="dashTop" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1c1f25"/>
+              <stop offset="1" stop-color="#0a0c10"/>
+            </linearGradient>
+            <linearGradient id="screenBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#10131a"/>
+              <stop offset="1" stop-color="#05070b"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="760" height="380" rx="36" fill="url(#dashTop)"/>
+          <rect x="20" y="20" width="720" height="340" rx="22" fill="url(#screenBg)" stroke="#272b34" stroke-width="1"/>
+          <rect x="36" y="36" width="116" height="48" rx="12" fill="#1f242e"/>
+          <text x="56" y="66" font-family="-apple-system, SF Pro Text, system-ui" font-size="15" font-weight="600" fill="#f5f5f7">Nearest</text>
+          <circle cx="48" cy="60" r="4" fill="#C6FF3D"/>
+          <text x="180" y="62" font-family="-apple-system" font-size="14" fill="#a1a7b3">Cheapest</text>
+          <text x="300" y="62" font-family="-apple-system" font-size="14" fill="#a1a7b3">Favorites</text>
+          <text x="430" y="62" font-family="-apple-system" font-size="14" fill="#a1a7b3">Search</text>
+          <rect x="36" y="104" width="688" height="60" rx="14" fill="#161a22" stroke="#222731" stroke-width="1"/>
+          <text x="56" y="132" font-family="-apple-system" font-size="16" font-weight="600" fill="#f5f5f7">EVgo · Westfield Mall</text>
+          <text x="56" y="152" font-family="-apple-system" font-size="13" fill="#a1a7b3">0.4 mi · CCS · 350 kW · $0.31 / kWh</text>
+          <rect x="640" y="120" width="68" height="28" rx="14" fill="#C6FF3D"/>
+          <text x="660" y="139" font-family="-apple-system" font-size="13" font-weight="700" fill="#0a0c10">FAST</text>
+          <rect x="36" y="176" width="688" height="60" rx="14" fill="#161a22" stroke="#222731" stroke-width="1"/>
+          <text x="56" y="204" font-family="-apple-system" font-size="16" font-weight="600" fill="#f5f5f7">ChargePoint · Whole Foods</text>
+          <text x="56" y="224" font-family="-apple-system" font-size="13" fill="#a1a7b3">0.7 mi · J1772 · 7.7 kW · $0.18 / kWh</text>
+          <rect x="36" y="248" width="688" height="60" rx="14" fill="#161a22" stroke="#222731" stroke-width="1"/>
+          <text x="56" y="276" font-family="-apple-system" font-size="16" font-weight="600" fill="#f5f5f7">City Garage · Free Level 2</text>
+          <text x="56" y="296" font-family="-apple-system" font-size="13" fill="#a1a7b3">0.9 mi · J1772 · 6.6 kW · Free</text>
+          <rect x="640" y="264" width="68" height="28" rx="14" fill="#C6FF3D"/>
+          <text x="664" y="283" font-family="-apple-system" font-size="13" font-weight="700" fill="#0a0c10">FREE</text>
+          <rect x="36" y="324" width="688" height="20" rx="6" fill="#0c0e13"/>
+        </svg>
       </div>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="https://apps.apple.com/us/app/wattsnear/id6762151871" rel="noopener">App Store</a>
-      </div>
-    </footer>
+
+      <ul class="carplay-callouts">
+        <li>
+          <strong>Nearest</strong>
+          <span>Closest stations to where you are, ranked by distance.</span>
+        </li>
+        <li>
+          <strong>Cheapest</strong>
+          <span>Sorted by estimated $/kWh — free chargers float to the top.</span>
+        </li>
+        <li>
+          <strong>Favorites</strong>
+          <span>Your trusted stations, synced from your phone via iCloud.</span>
+        </li>
+        <li>
+          <strong>Search</strong>
+          <span>Filter by network, connector, and power level — without typing.</span>
+        </li>
+      </ul>
+
+      <p class="siri-line">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12c1 1.4 2.4 2.2 4 2.2s3-.8 4-2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>"Hey Siri, find a charger" — works on the lock screen.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="screens" id="screens" aria-labelledby="screens-h2">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">See it on iPhone</p>
+      <h2 id="screens-h2">Straight from the App Store.</h2>
+      <p class="section-sub">No mockups, no marketing renders — these are actual app screens.</p>
+    </header>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="screens-strip" role="list" tabindex="0" aria-label="App screenshots — use arrow keys to scroll">
+    <figure role="listitem" class="screen-card reveal">
+      <img src="/screenshots/welcome.webp" alt="WattsNear onboarding welcome screen highlighting closest, cheapest, map, and favorites." width="500" height="1084" loading="lazy" decoding="async">
+      <figcaption>Welcome &amp; onboarding</figcaption>
+    </figure>
+    <figure role="listitem" class="screen-card reveal">
+      <img src="/screenshots/closest.webp" alt="Closest chargers list sorted by distance with network and connector badges." width="500" height="1084" loading="lazy" decoding="async">
+      <figcaption>Closest tab</figcaption>
+    </figure>
+    <figure role="listitem" class="screen-card reveal">
+      <img src="/screenshots/cheapest.webp" alt="Cheapest chargers list with free option highlighted at the top." width="500" height="1084" loading="lazy" decoding="async">
+      <figcaption>Cheapest tab</figcaption>
+    </figure>
+    <figure role="listitem" class="screen-card reveal">
+      <img src="/screenshots/map.webp" alt="Map of charging stations with bolt-icon pins across a city." width="500" height="1084" loading="lazy" decoding="async">
+      <figcaption>Map &amp; search this area</figcaption>
+    </figure>
+    <figure role="listitem" class="screen-card reveal">
+      <img src="/screenshots/siri.webp" alt="Siri shortcuts: find closest charger, find cheapest, search, log session." width="500" height="1084" loading="lazy" decoding="async">
+      <figcaption>Siri shortcuts</figcaption>
+    </figure>
+    <figure role="listitem" class="screen-card reveal">
+      <img src="/screenshots/log-session.webp" alt="Log a charging session: vehicle, station, date, kWh, duration, and total cost." width="500" height="1084" loading="lazy" decoding="async">
+      <figcaption>Log a charging session</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="save" id="save" aria-labelledby="save-h2">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">What you'll save</p>
+      <h2 id="save-h2">Real numbers, real drivers.</h2>
+      <p class="section-sub">Three honest scenarios — then tune the sliders for your own driving.</p>
+    </header>
+
+    <div class="scenario-grid">
+      <article class="scenario-card reveal">
+        <p class="scenario-tag">Daily commuter</p>
+        <p class="scenario-headline">200&nbsp;mi/wk · home charging</p>
+        <p class="scenario-detail">3.5 mi/kWh · $0.18/kWh · vs $4.20/gal at 28 mpg.</p>
+        <p class="scenario-amount"><span class="scenario-currency">~$</span>1,028<span class="scenario-unit">/yr</span></p>
+        <p class="scenario-foot">saved on the way to work</p>
+      </article>
+      <article class="scenario-card reveal">
+        <p class="scenario-tag">Road tripper</p>
+        <p class="scenario-headline">12,000&nbsp;mi/yr · blended</p>
+        <p class="scenario-detail">Mixed home + DCFC at $0.30/kWh · vs $4.20/gal at 28 mpg.</p>
+        <p class="scenario-amount"><span class="scenario-currency">~$</span>770<span class="scenario-unit">/yr</span></p>
+        <p class="scenario-foot">enough for the next long weekend</p>
+      </article>
+      <article class="scenario-card reveal scenario-card--signature">
+        <p class="scenario-tag">Free-charger hunter</p>
+        <p class="scenario-headline">1&nbsp;free L2 session/wk</p>
+        <p class="scenario-detail">15 kWh per session, filtered to "Free only" in WattsNear.</p>
+        <p class="scenario-amount"><span class="scenario-currency">~$</span>200<span class="scenario-unit">/yr</span></p>
+        <p class="scenario-foot">in pure free electrons</p>
+      </article>
+    </div>
+
+    <div class="calc reveal" aria-labelledby="calc-h3">
+      <header class="calc-head">
+        <h3 id="calc-h3">Tune it to your driving.</h3>
+        <p>Sliders update live. The same math runs inside the app's trip-range planner.</p>
+      </header>
+      <div class="calc-grid">
+        <div class="calc-form">
+          <label>
+            <span class="calc-label">Weekly driving</span>
+            <input id="miles" type="range" min="20" max="600" step="10" value="200">
+            <span class="calc-readout"><strong id="miles-value">200</strong> mi / week</span>
+          </label>
+          <label>
+            <span class="calc-label">Vehicle efficiency</span>
+            <input id="efficiency" type="range" min="2" max="5.5" step="0.1" value="3.5">
+            <span class="calc-readout"><strong id="efficiency-value">3.5</strong> mi / kWh</span>
+          </label>
+          <label>
+            <span class="calc-label">Charging price</span>
+            <input id="price" type="range" min="0" max="0.85" step="0.01" value="0.18">
+            <span class="calc-readout"><strong id="price-value">$0.18</strong> / kWh</span>
+          </label>
+          <label>
+            <span class="calc-label">Gas comparison</span>
+            <input id="gas" type="range" min="2" max="6.5" step="0.05" value="4.20">
+            <span class="calc-readout"><strong id="gas-value">$4.20</strong> / gallon</span>
+          </label>
+        </div>
+
+        <div class="calc-results" aria-live="polite">
+          <div class="result-card">
+            <span>Annual charging cost</span>
+            <strong id="annual-cost">$0</strong>
+          </div>
+          <div class="result-card">
+            <span>Gas equivalent</span>
+            <strong id="gas-equivalent">$0</strong>
+          </div>
+          <div class="result-card result-card--signature">
+            <span>You save</span>
+            <strong id="savings">$0</strong>
+            <p class="result-foot">per year, vs. driving gas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="privacy-band" aria-labelledby="privacy-band-h2">
+  <div class="container">
+    <header class="section-head section-head--center reveal">
+      <p class="eyebrow">Privacy you can feel</p>
+      <h2 id="privacy-band-h2">No account. No tracking. No catch.</h2>
+    </header>
+    <ul class="privacy-pillars">
+      <li class="reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6"/></svg>
+        <strong>Private by design</strong>
+        <span>Your coordinates go straight to NREL — never to us.</span>
+      </li>
+      <li class="reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <strong>No sign-up</strong>
+        <span>Open the app and you're already in. No email, no password.</span>
+      </li>
+      <li class="reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17a4 4 0 1 1 1.3-7.8A6 6 0 0 1 20 12a4 4 0 0 1-1 7.9H7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <strong>iCloud-only sync</strong>
+        <span>Favorites and history sync via your private iCloud database.</span>
+      </li>
+      <li class="reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 2 4 14h6l-1 8 11-14h-7V2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <strong>Free forever</strong>
+        <span>One-time remove-ads purchase. No subscriptions. No dark patterns.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-h2">
+  <div class="container container--narrow">
+    <header class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-h2">Quick answers.</h2>
+    </header>
+    <div class="faq-list" data-faq>
+      {%- for item in site.data.faq -%}
+      <details class="faq-item reveal"{% if forloop.first %} open{% endif %}>
+        <summary>
+          <span>{{ item.q }}</span>
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer"><p>{{ item.a }}</p></div>
+      </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="download" aria-labelledby="final-cta-h2">
+  <div class="container final-cta-inner reveal">
+    <p class="eyebrow eyebrow--light">Get the app</p>
+    <h2 id="final-cta-h2">The smartest EV map on iPhone.</h2>
+    <p class="final-cta-sub">Free. No account. No tracking. Try it in the next parking lot.</p>
+    <div class="final-cta-actions">
+      {% include app-store-cta.html size="lg" %}
+    </div>
+    <p class="final-cta-foot">Requires iPhone with iOS 18 or later. CarPlay and Siri features are optional.</p>
+  </div>
+</section>

@@ -1,35 +1,39 @@
 ---
 layout: default
 title: Blog
+description: EV charging tips, savings calculators, and route-planning guides from the team behind WattsNear.
 permalink: /blog/
 ---
-<section class="section">
-  <div class="section-heading narrow">
-    <span class="eyebrow">WattsNear Blog</span>
-    <h1>EV charging tips, savings calculators, and route guides.</h1>
-    <p>Practical posts about finding cheaper EV charging in your area, planning road trips around real-world range, and getting the most out of WattsNear. New posts ship roughly weekly.</p>
-  </div>
 
-  {%- if site.posts.size > 0 -%}
-  <div class="post-list">
-    {% for post in site.posts %}
-    <article class="post-card{% unless post.image %} post-card--no-image{% endunless %}">
-      <a href="{{ post.url | relative_url }}">
-        {%- if post.image -%}
-        <figure class="post-card-figure">
-          <img src="{{ post.image | relative_url }}" alt="" loading="lazy" decoding="async">
-        </figure>
-        {%- endif -%}
-        <div class="post-card-body">
-          <span class="post-card-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>{%- if post.read_time %} · {{ post.read_time }} min{%- endif -%}</span>
-          <h2>{{ post.title }}</h2>
-          {%- if post.summary %}<p>{{ post.summary }}</p>{%- endif -%}
-        </div>
-      </a>
-    </article>
-    {% endfor %}
+<section class="blog-index" aria-labelledby="blog-h1">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">WattsNear Blog</p>
+      <h1 id="blog-h1">EV charging tips, savings, and route guides.</h1>
+      <p class="section-sub">Practical posts about finding cheaper EV charging, planning road trips around real-world range, and getting the most out of WattsNear. New posts roughly weekly.</p>
+    </header>
+
+    {%- if site.posts.size > 0 -%}
+    <div class="post-list">
+      {% for post in site.posts %}
+      <article class="post-card{% unless post.image %} post-card--no-image{% endunless %}">
+        <a href="{{ post.url | relative_url }}">
+          {%- if post.image -%}
+          <figure class="post-card-figure">
+            <img src="{{ post.image | relative_url }}" alt="" loading="lazy" decoding="async">
+          </figure>
+          {%- endif -%}
+          <div class="post-card-body">
+            <span class="post-card-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>{%- if post.read_time %} · {{ post.read_time }} min{%- endif -%}</span>
+            <h2>{{ post.title }}</h2>
+            {%- if post.summary %}<p>{{ post.summary }}</p>{%- endif -%}
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+    {%- else -%}
+    <p>First post is on the way. <a href="/feed.xml">Subscribe to the RSS feed</a> if you want it the moment it lands.</p>
+    {%- endif -%}
   </div>
-  {%- else -%}
-  <p>First post is on the way. <a href="/feed.xml">Subscribe to the RSS feed</a> if you want it the moment it lands.</p>
-  {%- endif -%}
 </section>

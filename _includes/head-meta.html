@@ -1,0 +1,46 @@
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_desc = page.description | default: site.description -%}
+{%- assign page_url = page.url | absolute_url -%}
+{%- assign og_image = page.image | default: '/assets/og-image.png' | absolute_url -%}
+{%- if page.homepage -%}
+  <title>WattsNear — Find the closest, cheapest EV charger for iPhone &amp; CarPlay</title>
+{%- elsif page.title -%}
+  <title>{{ page.title }} — WattsNear</title>
+{%- else -%}
+  <title>WattsNear</title>
+{%- endif %}
+<meta name="description" content="{{ page_desc }}">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FBFBFD" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="{{ page_url }}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{% if page.homepage %}WattsNear — Find the closest, cheapest EV charger{% else %}{{ page_title }}{% endif %}">
+<meta property="og:description" content="{{ page_desc }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="WattsNear">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.homepage %}WattsNear — Find the closest, cheapest EV charger{% else %}{{ page_title }}{% endif %}">
+<meta name="twitter:description" content="{{ page_desc }}">
+<meta name="twitter:image" content="{{ og_image }}">
+
+{%- if page.homepage %}
+<link rel="preload" as="image" href="/screenshots/cheapest.webp" type="image/webp" fetchpriority="high">
+{%- endif %}
+<link rel="alternate" type="application/rss+xml" title="WattsNear Blog" href="/feed.xml">
+<link rel="stylesheet" href="/style.css">
+<script>
+  // Set theme as early as possible to avoid flash. Honors saved preference, then system.
+  (function () {
+    try {
+      var s = localStorage.getItem('wattsnear-theme');
+      var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = s || (d ? 'dark' : 'light');
+    } catch (e) {}
+  })();
+</script>
