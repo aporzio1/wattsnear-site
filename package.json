@@ -1,0 +1,11 @@
+{
+  "name": "wattsnear-site",
+  "private": true,
+  "scripts": {
+    "fetch-posts": "node scripts/fetch-soro-posts.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0",
+    "turndown": "^7.2.0"
+  }
+}
