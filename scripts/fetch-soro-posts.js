@@ -2,8 +2,9 @@
 /**
  * Fetch Soro blog posts and save them as Jekyll Markdown files in _posts/.
  *
- * Works by loading the Soro embed in a headless Chromium browser, intercepting
- * the API responses Soro makes, then converting each post to Markdown.
+ * Soro bundles post metadata (SORO_ARTICLES) directly in the embed script.
+ * Full article HTML is loaded by navigating to /?post=<slug>. This script
+ * does both steps in a headless browser and converts each post to Markdown.
  *
  * Setup (one-time):
  *   npm install
@@ -11,20 +12,17 @@
  *
  * Run:
  *   node scripts/fetch-soro-posts.js
- *
- * Debug (dumps raw API payloads):
- *   DEBUG=1 node scripts/fetch-soro-posts.js
  */
 
 'use strict';
 
 const { chromium } = require('playwright');
 const TurndownService = require('turndown');
+const http = require('http');
 const fs   = require('fs');
 const path = require('path');
 
 const SORO_ID   = 'a403844d-5cf4-4fd6-905d-f4a16be5d507';
-const SITE_URL  = 'https://wattsnear.com/';
 const POSTS_DIR = path.resolve(__dirname, '../_posts');
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
@@ -39,10 +37,10 @@ function isoDate(raw) {
   return isNaN(d) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10);
 }
 
-function buildFrontmatter(post, date) {
-  const title   = (post.title   || 'Untitled').replace(/"/g, '\\"');
-  const summary = (post.summary || '').replace(/"/g, '\\"');
-  const image   = post.image || '';
+function buildFrontmatter(article, date) {
+  const title   = (article.title   || 'Untitled').replace(/"/g, '\\"');
+  const summary = (article.excerpt || article.summary || '').replace(/"/g, '\\"');
+  const image   = article.image || '';
 
   const lines = [
     '---',
@@ -57,24 +55,14 @@ function buildFrontmatter(post, date) {
   return lines.join('\n');
 }
 
-function normalisePost(raw) {
-  return {
-    title:   raw.title || raw.name || raw.heading || '',
-    slug:    raw.slug  || raw.url_slug || slugify(raw.title || raw.name || ''),
-    date:    raw.date  || raw.published_at || raw.publishedAt || raw.created_at || raw.createdAt || '',
-    summary: raw.summary || raw.excerpt || raw.meta_description || raw.seoDescription || '',
-    image:   raw.image || raw.featured_image || raw.coverImage || raw.thumbnail || '',
-    content: raw.content || raw.body || raw.html || raw.markdown || '',
-  };
-}
-
-function extractPostsFromResponse(data) {
-  if (Array.isArray(data)) return data;
-  for (const key of ['posts', 'articles', 'blogs', 'items', 'data', 'results']) {
-    if (Array.isArray(data[key])) return data[key];
-  }
-  if (data.title || data.name) return [data]; // single post object
-  return [];
+function startLocalServer(html) {
+  return new Promise((resolve) => {
+    const server = http.createServer((_req, res) => {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      res.end(html);
+    });
+    server.listen(0, '127.0.0.1', () => resolve({ server, port: server.address().port }));
+  });
 }
 
 // ─── main ─────────────────────────────────────────────────────────────────────
@@ -82,78 +70,60 @@ function extractPostsFromResponse(data) {
 async function main() {
   const td = new TurndownService({ headingStyle: 'atx', bulletListMarker: '-' });
 
-  console.log('Launching browser…');
-  const browser = await chromium.launch({ headless: true });
-  const page    = await browser.newPage();
-
-  // Collect every JSON response from trysoro.com
-  const captured = [];
-  page.on('response', async (response) => {
-    if (!response.url().includes('trysoro.com')) return;
-    const ct = response.headers()['content-type'] || '';
-    if (!ct.includes('json')) return;
-    try {
-      const data = await response.json();
-      captured.push({ url: response.url(), data });
-      console.log(`  [api] ${response.url()}`);
-    } catch {}
-  });
-
-  // Minimal host page with real site Referer so Soro doesn't reject the embed
   const embedHtml = `<!DOCTYPE html>
 <html><head><meta charset="utf-8"></head>
 <body>
 <div id="soro-blog"></div>
-<script src="https://app.trysoro.com/api/embed/${SORO_ID}?theme=dark" defer></script>
+<script src="https://app.trysoro.com/api/embed/${SORO_ID}?theme=dark"></script>
 </body></html>`;
 
-  await page.setExtraHTTPHeaders({ Referer: SITE_URL });
-  await page.goto(`data:text/html,${encodeURIComponent(embedHtml)}`, { waitUntil: 'networkidle', timeout: 30_000 }).catch(() => {});
-  await page.setContent(embedHtml, { waitUntil: 'networkidle', timeout: 30_000 }).catch(() => {});
+  const { server, port } = await startLocalServer(embedHtml);
+  const baseUrl = `http://127.0.0.1:${port}/`;
+  console.log(`Local server: ${baseUrl}`);
 
-  // Brief pause for any deferred/lazy API calls
-  await new Promise(r => setTimeout(r, 4000));
+  const browser = await chromium.launch({ headless: true, args: ['--ignore-certificate-errors'] });
+  const page    = await browser.newPage();
 
-  await browser.close();
+  // ── Step 1: intercept embed script and parse SORO_ARTICLES out of it ───────
+  let scriptSource = '';
+  page.on('response', async (response) => {
+    if (!response.url().includes('trysoro.com')) return;
+    try { scriptSource = await response.text(); } catch {}
+  });
 
-  // ── find posts in captured responses ──────────────────────────────────────
-  let rawPosts = [];
-  for (const { url, data } of captured) {
-    const found = extractPostsFromResponse(data);
-    if (found.length > 0) {
-      console.log(`\nFound ${found.length} post(s) from: ${url}`);
-      rawPosts = found;
-      break;
-    }
-  }
+  console.log('Loading embed…');
+  await page.goto(baseUrl, { waitUntil: 'networkidle', timeout: 30_000 });
 
-  if (rawPosts.length === 0) {
-    console.log('\nNo posts found in intercepted API responses.');
-    if (captured.length === 0) {
-      console.log('No requests to trysoro.com were intercepted at all.');
-      console.log('The embed may require a real browser session or domain whitelist.');
-    } else {
-      console.log('Intercepted URLs:');
-      captured.forEach(c => console.log('  ', c.url));
-    }
-    if (process.env.DEBUG) {
-      console.log('\nRaw payloads:');
-      captured.forEach(c => console.log(JSON.stringify(c.data, null, 2)));
-    }
-    console.log('\nFallback: open your blog in Chrome, open DevTools → Network,');
-    console.log('filter by "trysoro", and look for a JSON response with your posts.');
-    console.log('Copy that JSON and run: node scripts/import-soro-json.js <file.json>');
+  // SORO_ARTICLES is declared as a local var inside an IIFE, so extract via regex
+  const match = scriptSource.match(/var SORO_ARTICLES\s*=\s*(\[[\s\S]*?\]);/);
+  if (!match) {
+    console.error('Could not find SORO_ARTICLES in embed script.');
+    if (process.env.DEBUG) console.log('Script preview:', scriptSource.slice(0, 600));
+    await browser.close();
+    server.close();
     return;
   }
 
-  // ── convert & save ────────────────────────────────────────────────────────
+  let articles;
+  try { articles = JSON.parse(match[1]); }
+  catch (e) { console.error('Failed to parse SORO_ARTICLES JSON:', e.message); await browser.close(); server.close(); return; }
+
+  if (!articles || articles.length === 0) {
+    console.error('SORO_ARTICLES is empty.');
+    await browser.close();
+    server.close();
+    return;
+  }
+
+  console.log(`Found ${articles.length} article(s) in SORO_ARTICLES\n`);
+
+  // ── Step 2: for each article, load full content via /?post=<slug> ─────────
   fs.mkdirSync(POSTS_DIR, { recursive: true });
   let saved = 0, skipped = 0;
 
-  for (const raw of rawPosts) {
-    const post     = normalisePost(raw);
-    const date     = isoDate(post.date);
-    const slug     = post.slug || slugify(post.title);
+  for (const article of articles) {
+    const slug     = article.slug || slugify(article.title || '');
+    const date     = isoDate(article.isoDate || article.date);
     const filename = `${date}-${slug}.md`;
     const filePath = path.join(POSTS_DIR, filename);
 
@@ -163,14 +133,40 @@ async function main() {
       continue;
     }
 
-    const mdBody = post.content.includes('<')
-      ? td.turndown(post.content)
-      : post.content;
+    console.log(`  fetching: ${slug}`);
+    await page.goto(`${baseUrl}?post=${slug}`, { waitUntil: 'networkidle', timeout: 20_000 });
+    await new Promise(r => setTimeout(r, 1500));
 
-    fs.writeFileSync(filePath, buildFrontmatter(post, date) + mdBody + '\n', 'utf8');
+    // Extract the article body — prefer the innermost content div over the full #soro-blog wrapper
+    // (which contains Soro UI chrome like back-nav, title, and date header)
+    const articleHtml = await page.evaluate(() => {
+      // Remove the back-navigation header and any duplicate h1/time before extracting
+      document.querySelectorAll('.soro-blog-header, .soro-blog-back').forEach(el => el.remove());
+      const article = document.querySelector('.soro-blog-article');
+      if (article) {
+        // Remove the first h1 (title) and time element — those go in frontmatter
+        article.querySelector('h1')?.remove();
+        article.querySelector('time')?.remove();
+      }
+      const el = article || document.querySelector('#soro-blog');
+      return el ? el.innerHTML : '';
+    });
+
+    if (!articleHtml) {
+      console.log(`  warn: no content found for ${slug}`);
+      continue;
+    }
+
+    const mdBody   = td.turndown(articleHtml);
+    const contents = buildFrontmatter(article, date) + mdBody + '\n';
+
+    fs.writeFileSync(filePath, contents, 'utf8');
     console.log(`  saved: _posts/${filename}`);
     saved++;
   }
+
+  await browser.close();
+  server.close();
 
   console.log(`\nDone — ${saved} saved, ${skipped} already existed.`);
 }
