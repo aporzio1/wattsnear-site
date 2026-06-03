@@ -1,6 +1,6 @@
 # WattsNear website
 
-Customer-facing marketing site for the [WattsNear](https://apps.apple.com/us/app/wattsnear/id6762151871) iPhone & CarPlay app. Hosted on GitHub Pages, served at <https://wattsnear.com/>. Jekyll-powered so the blog Just Works.
+Customer-facing marketing site for the [WattsNear](https://apps.apple.com/app/apple-store/id6762151871?pt=127464251&ct=website&mt=8) iPhone & CarPlay app. Hosted on GitHub Pages, served at <https://wattsnear.com/>. Jekyll-powered so the blog Just Works.
 
 ## Files
 
