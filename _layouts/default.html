@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   {% include head-meta.html %}
   {% include structured-data.html %}
-  {%- if jekyll.environment != "production" -%}{%- comment -%}no-op{%- endcomment -%}{%- endif -%}
-  {% seo title=false %}
+
 </head>
 <body{% if page.homepage %} class="page-home"{% endif %}>
   {% include topbar.html %}

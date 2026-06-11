@@ -1,0 +1,115 @@
+---
+layout: default
+title: EV Charging Cost Calculator — How Much Does It Cost to Charge an EV?
+description: Calculate your annual EV charging cost and savings vs. gas. Adjust weekly miles, vehicle efficiency, charging price, and gas price. Free tool by WattsNear.
+permalink: /ev-charging-cost-calculator/
+---
+
+<section class="lp-hero" aria-labelledby="lp-h1">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">EV Charging Cost Calculator</p>
+      <h1 id="lp-h1">How much does it cost to charge an electric car?</h1>
+      <p class="section-sub">Use the sliders to calculate your EV charging costs and see exactly how much you save compared to gas — based on your actual driving habits.</p>
+    </header>
+  </div>
+</section>
+
+<section class="save" aria-labelledby="calc-page-h2">
+  <div class="container">
+    <header class="section-head reveal">
+      <h2 id="calc-page-h2">EV charging cost calculator</h2>
+      <p class="section-sub">Adjust the inputs for your vehicle, driving distance, and local electricity rate. Results update instantly.</p>
+    </header>
+
+    <div class="calc reveal" aria-labelledby="calc-h3">
+      <header class="calc-head">
+        <h3 id="calc-h3">Tune it to your driving.</h3>
+        <p>Sliders update live. The same math runs inside the WattsNear app's trip-range planner.</p>
+      </header>
+      <div class="calc-grid">
+        <div class="calc-form">
+          <label>
+            <span class="calc-label">Weekly driving</span>
+            <input id="miles" type="range" min="20" max="600" step="10" value="200">
+            <span class="calc-readout"><strong id="miles-value">200</strong> mi / week</span>
+          </label>
+          <label>
+            <span class="calc-label">Vehicle efficiency</span>
+            <input id="efficiency" type="range" min="2" max="5.5" step="0.1" value="3.5">
+            <span class="calc-readout"><strong id="efficiency-value">3.5</strong> mi / kWh</span>
+          </label>
+          <label>
+            <span class="calc-label">Charging price</span>
+            <input id="price" type="range" min="0" max="0.85" step="0.01" value="0.18">
+            <span class="calc-readout"><strong id="price-value">$0.18</strong> / kWh</span>
+          </label>
+          <label>
+            <span class="calc-label">Gas comparison</span>
+            <input id="gas" type="range" min="2" max="6.5" step="0.05" value="4.20">
+            <span class="calc-readout"><strong id="gas-value">$4.20</strong> / gallon</span>
+          </label>
+        </div>
+
+        <div class="calc-results" aria-live="polite">
+          <div class="result-card">
+            <span>Annual charging cost</span>
+            <strong id="annual-cost">$0</strong>
+          </div>
+          <div class="result-card">
+            <span>Gas equivalent</span>
+            <strong id="gas-equivalent">$0</strong>
+          </div>
+          <div class="result-card result-card--signature">
+            <span>You save</span>
+            <strong id="savings">$0</strong>
+            <p class="result-foot">per year, vs. driving gas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lp-detail" aria-labelledby="lp-detail-h2">
+  <div class="container container--narrow">
+    <h2 id="lp-detail-h2">How is EV charging cost calculated?</h2>
+    <p>EV charging cost depends on three factors: how far you drive, how efficient your vehicle is, and what you pay per kilowatt-hour (kWh). The formula:</p>
+    <p><strong>Annual cost = (weekly miles ÷ efficiency) × price per kWh × 52 weeks</strong></p>
+    <p>For example: 200 mi/week ÷ 3.5 mi/kWh = 57.1 kWh/week. At $0.18/kWh × 52 weeks = <strong>$534/year</strong>.</p>
+    <p>Home charging in the U.S. averages around $0.13–$0.20/kWh depending on your utility and time-of-use plan. Public Level 2 chargers typically run $0.20–$0.35/kWh. DC fast chargers can reach $0.40–$0.65/kWh.</p>
+    <p>To minimize charging costs, WattsNear helps you find the cheapest public chargers near you — sorted by $/kWh, powered by the U.S. DOE NREL database.</p>
+  </div>
+</section>
+
+<section class="lp-features" aria-labelledby="lp-features-h2">
+  <div class="container">
+    <h2 id="lp-features-h2">Find the cheapest chargers near you</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Sorted by $/kWh</h3>
+        <p>WattsNear is the only EV app that sorts chargers by estimated price per kWh, not just distance. The cheapest option is always at the top.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Live DOE data</h3>
+        <p>All pricing comes from the NREL alternative fuels database — updated daily, sourced from station operators, not user guesses.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Free &amp; no account</h3>
+        <p>WattsNear is completely free with no sign-up and no ads. Open it and start finding cheaper charging immediately.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Works on CarPlay</h3>
+        <p>See charger prices on your dashboard while driving. WattsNear is a native CarPlay app for iPhone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lp-cta" aria-labelledby="lp-cta-h2">
+  <div class="container">
+    <h2 id="lp-cta-h2">Find cheap EV charging near you — download WattsNear free.</h2>
+    <p>Free for iPhone with iOS 18 or later. Also works on CarPlay.</p>
+    {% include app-store-cta.html size="lg" campaign="lp-calculator" %}
+  </div>
+</section>
