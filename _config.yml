@@ -4,14 +4,15 @@ url: https://wattsnear.com
 author:
   name: Andrew Porzio
   url: https://wattsnear.com
-twitter:
-  username: ""
-  card: summary_large_image
 logo: /favicon.svg
+
+appstore:
+  id: "6762151871"
+  pt: "127464251"
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Pretty URLs for blog posts: /blog/<slug>/
 permalink: /blog/:slug/

@@ -2,6 +2,8 @@
 {%- assign page_desc = page.description | default: site.description -%}
 {%- assign page_url = page.url | absolute_url -%}
 {%- assign og_image = page.image | default: '/assets/og-image.png' | absolute_url -%}
+{%- assign og_image_is_default = false -%}
+{%- unless page.image -%}{%- assign og_image_is_default = true -%}{%- endunless -%}
 {%- if page.homepage -%}
   <title>WattsNear — Find the closest, cheapest EV charger for iPhone &amp; CarPlay</title>
 {%- elsif page.title -%}
@@ -12,25 +14,32 @@
 <meta name="description" content="{{ page_desc }}">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FBFBFD" media="(prefers-color-scheme: light)">
+<meta name="apple-itunes-app" content="app-id=6762151871, affiliate-data=pt=127464251&amp;ct=smartbanner&amp;mt=8">
 <link rel="canonical" href="{{ page_url }}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:title" content="{% if page.homepage %}WattsNear — Find the closest, cheapest EV charger{% else %}{{ page_title }}{% endif %}">
 <meta property="og:description" content="{{ page_desc }}">
 <meta property="og:url" content="{{ page_url }}">
 <meta property="og:image" content="{{ og_image }}">
+{%- if og_image_is_default %}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+{%- endif %}
 <meta property="og:site_name" content="WattsNear">
+{%- if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- if page.author %}<meta property="article:author" content="{{ page.author }}">{%- endif %}
+{%- endif %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{% if page.homepage %}WattsNear — Find the closest, cheapest EV charger{% else %}{{ page_title }}{% endif %}">
 <meta name="twitter:description" content="{{ page_desc }}">
 <meta name="twitter:image" content="{{ og_image }}">
 
 {%- if page.homepage %}
-<link rel="preload" as="image" href="/screenshots/cheapest.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/cheapest.webp" type="image/webp" fetchpriority="high">
 {%- endif %}
 <link rel="alternate" type="application/rss+xml" title="WattsNear Blog" href="/feed.xml">
 <link rel="stylesheet" href="/style.css">
