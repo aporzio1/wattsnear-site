@@ -1,0 +1,35 @@
+name: Pull Threads metrics
+
+on:
+  schedule:
+    # 06:00 UTC Mondays — pull last week's App Store Connect attribution data.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write  # so we can commit metrics.csv back
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pull App Store Connect metrics
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          ASC_VENDOR_NUMBER: ${{ vars.ASC_VENDOR_NUMBER }}
+        run: node scripts/pull-asc-metrics.mjs
+      - name: Commit metrics if changed
+        run: |
+          if [[ -n "$(git status --porcelain marketing/metrics.csv 2>/dev/null)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add marketing/metrics.csv
+            git commit -m "chore: update Threads metrics"
+            git push
+          fi
