@@ -1,0 +1,36 @@
+name: Post to Threads
+
+on:
+  schedule:
+    # 14:00 UTC, Mon-Sat (skips Sunday). Adjust to your timezone preference.
+    - cron: '0 14 * * 1-6'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Print the post without sending'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: threads-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Post to Threads
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          APP_STORE_PROVIDER_TOKEN: ${{ vars.APP_STORE_PROVIDER_TOKEN }}
+          THREADS_LAUNCH_DATE: ${{ vars.THREADS_LAUNCH_DATE }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: node scripts/post-to-threads.mjs
