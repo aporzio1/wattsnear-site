@@ -1,0 +1,28 @@
+name: PR syntax checks
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-checks-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  syntax:
+    name: JavaScript and Python syntax
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check JavaScript syntax
+        run: |
+          node --check script.js
+          node --check scripts/fetch-soro-posts.js
+      - name: Check Python syntax
+        run: |
+          python3 -c 'import ast, pathlib; ast.parse(pathlib.Path("scripts/batch-fetch-api.py").read_bytes(), filename="scripts/batch-fetch-api.py")'
