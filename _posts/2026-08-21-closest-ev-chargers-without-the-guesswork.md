@@ -3,6 +3,7 @@ layout: post
 title: "Closest Ev Chargers Without The Guesswork"
 date: 2026-08-21 09:00:00 -0400
 author: Andrew Porzio
+description: "You do not need a philosophy lesson when your battery is dropping faster than expected. You need the closest EV chargers, you need to know whether they."
 ---
 
 You do not need a philosophy lesson when your battery is dropping faster than expected. You need the closest EV chargers, you need to know whether they actually fit your car, and you need a decent read on what that stop will cost before you pull in.

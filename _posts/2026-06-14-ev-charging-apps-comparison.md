@@ -3,6 +3,7 @@ layout: post
 title: "Ev Charging Apps Comparison"
 date: 2026-06-14 09:00:00 -0400
 author: Andrew Porzio
+description: "Pulling into 12% battery is a bad time to discover your charging app is really a marketing funnel for one network. That is the real value of an EV."
 ---
 
 Pulling into 12% battery is a bad time to discover your charging app is really a marketing funnel for one network. That is the real value of an EV charging apps comparison: not just seeing which app has the prettiest map, but figuring out which one helps you find a usable, affordable charger fast, without extra taps, logins, or guesswork.

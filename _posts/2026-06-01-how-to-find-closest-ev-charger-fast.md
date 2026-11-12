@@ -5,6 +5,7 @@ date: 2026-06-01 09:00:00 -0400
 author: Andrew Porzio
 summary: "Learn how to find closest EV charger fast with live data, price checks, and simple filters so you waste less time and avoid bad charging stops."
 image: "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/9dbeed5e-7a34-4d96-b01e-3bccc091ea11.webp"
+description: "Learn how to find closest EV charger fast with live data, price checks, and simple filters so you waste less time and avoid bad charging stops."
 ---
 
 ![How to Find Closest EV Charger Fast](https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/9dbeed5e-7a34-4d96-b01e-3bccc091ea11.webp)

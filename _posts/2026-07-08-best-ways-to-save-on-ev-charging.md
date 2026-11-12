@@ -3,6 +3,7 @@ layout: post
 title: "Best Ways To Save On Ev Charging"
 date: 2026-07-08 09:00:00 -0400
 author: Andrew Porzio
+description: "Public fast charging can turn a cheap mile into an expensive one fast."
 ---
 
 Public fast charging can turn a cheap mile into an expensive one fast. Two stations a few blocks apart can have very different pricing, and the one with the biggest logo is not always the best deal. If you are looking for the best ways to save on EV charging, the biggest wins usually come from timing, charger selection, and avoiding convenience fees that add up quietly.

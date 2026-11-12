@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Affordable EV Charging Tactics to Cut Your Costs Now"
+title: "Affordable EV Charging: Cut Your Costs Now"
 date: 2026-05-15 09:00:00 -0400
 author: Andrew Porzio
 summary: "Public charging is expensive. Drop your per-kWh cost by knowing your baseline, timing sessions, picking memberships that pay back, and building a weekly routine."
 read_time: 7
 image: /assets/blog/affordable-ev-charging-tactics-to-cut-your-costs-now.jpg
+description: "Public charging is expensive. Drop your per-kWh cost by knowing your baseline, timing sessions, picking memberships that pay back, and building a weekly."
 ---
 
 ![Affordable EV Charging Tactics to Cut Your Costs Now](/assets/blog/affordable-ev-charging-tactics-to-cut-your-costs-now.jpg)

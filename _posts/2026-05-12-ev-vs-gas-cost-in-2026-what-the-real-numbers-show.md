@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "EV vs Gas Cost in 2026: What the Real Numbers Show"
+title: "EV vs Gas in 2026: The Real Numbers"
 date: 2026-05-12 12:00:00 -0400
 author: Andrew Porzio
 summary: "Everyone says EVs save money. Here are the actual 2026 numbers — home-charging cost per mile, what gas at $4.50/gal really means, and the variables that swing the gap for your specific driving."
 read_time: 8
 image: /assets/blog/ev-vs-gas-cost-in-2026-what-the-real-numbers-show.jpg
+description: "Everyone says EVs save money."
 ---
 
 ![EV vs Gas Cost in 2026: What the Real Numbers Show](/assets/blog/ev-vs-gas-cost-in-2026-what-the-real-numbers-show.jpg)

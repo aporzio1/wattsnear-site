@@ -3,6 +3,7 @@ layout: post
 title: "How To Compare Ev Charging Prices"
 date: 2026-07-16 09:00:00 -0400
 author: Andrew Porzio
+description: "A charger that looks convenient can easily cost twice as much as the one a mile away. That is why knowing how to compare EV charging prices matters."
 ---
 
 A charger that looks convenient can easily cost twice as much as the one a mile away. That is why knowing how to compare EV charging prices matters. Public charging prices are messy, and if you only look at the number on one network’s app, you can miss the real cost.

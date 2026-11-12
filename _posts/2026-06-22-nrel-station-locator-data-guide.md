@@ -3,6 +3,7 @@ layout: post
 title: "Nrel Station Locator Data Guide"
 date: 2026-06-22 09:00:00 -0400
 author: Andrew Porzio
+description: "You pull into a charger that looked perfect on the map, then find out the price is missing, the speed is overstated, or the station belongs to a network."
 ---
 
 You pull into a charger that looked perfect on the map, then find out the price is missing, the speed is overstated, or the station belongs to a network you did not expect. That gap between map data and real charging decisions is exactly why an NREL station locator data guide matters. The data is useful, but if you want the nearest and cheapest charger without guesswork, you need to know what the fields mean, where they fall short, and how to read them like a driver instead of a database.

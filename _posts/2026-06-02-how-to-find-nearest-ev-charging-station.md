@@ -5,6 +5,7 @@ date: 2026-06-02 09:00:00 -0400
 author: Andrew Porzio
 summary: "Learn how to find nearest EV charging station fast with live data, price checks, and connector filters so you waste less time and spend less."
 image: "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/df73ec4c-ed0b-4a96-9b63-354ba22abba4.webp"
+description: "Learn how to find nearest EV charging station fast with live data, price checks, and connector filters so you waste less time and spend less."
 ---
 
 ![How to Find Nearest EV Charging Station](https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/df73ec4c-ed0b-4a96-9b63-354ba22abba4.webp)

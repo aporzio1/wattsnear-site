@@ -3,6 +3,7 @@ layout: post
 title: "How To Use Carplay For Ev Charging"
 date: 2026-07-04 09:00:00 -0400
 author: Andrew Porzio
+description: "You do not want to be scrolling through three charging apps in a parking lot with 8% battery left. That is exactly why drivers ask how to use CarPlay."
 ---
 
 You do not want to be scrolling through three charging apps in a parking lot with 8% battery left. That is exactly why drivers ask how to use CarPlay for EV charging in the first place. The best setup lets you find a workable charger fast, compare options without pulling out your phone, and avoid wasting time on stations that are too slow, too far, or priced badly.

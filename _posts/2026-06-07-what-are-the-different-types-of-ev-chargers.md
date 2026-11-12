@@ -5,6 +5,7 @@ date: 2026-06-07 09:00:00 -0400
 author: Andrew Porzio
 summary: "What are the different types of EV chargers? Learn Level 1, Level 2, and DC fast charging, plus plugs, speeds, costs, and what fits your EV."
 image: "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/9b1ebd95-4d79-47fc-8266-79cde508ff48.webp"
+description: "What are the different types of EV chargers? Learn Level 1, Level 2, and DC fast charging, plus plugs, speeds, costs, and what fits your EV."
 ---
 
 ![What Are the Different Types of EV Chargers?](https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/9b1ebd95-4d79-47fc-8266-79cde508ff48.webp)

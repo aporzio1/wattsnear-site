@@ -6,6 +6,7 @@ author: Andrew Porzio
 summary: "What Level 3 EV charging is, which cars can use it, where the chargers live, and how to find the cheapest fast-charging stop on your route."
 read_time: 8
 image: /assets/blog/what-is-level-3-ev-charging-a-complete-guide.jpg
+description: "What Level 3 EV charging is, which cars can use it, where the chargers live, and how to find the cheapest fast-charging stop on your route."
 ---
 
 ![What Is Level 3 EV Charging? A Complete Guide](/assets/blog/what-is-level-3-ev-charging-a-complete-guide.jpg)

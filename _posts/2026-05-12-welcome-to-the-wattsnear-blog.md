@@ -5,6 +5,7 @@ date: 2026-05-12 06:00:00 -0400
 author: Andrew Porzio
 summary: "A new home for EV-charging guides, city-by-city cheapest-charger roundups, and practical posts about getting the most out of WattsNear on iPhone and CarPlay."
 read_time: 1
+description: "A new home for EV-charging guides, city-by-city cheapest-charger roundups, and practical posts about getting the most out of WattsNear on iPhone."
 ---
 
 This is the first post on the WattsNear blog. The plan: roughly one practical, no-fluff post per week, focused on the questions EV drivers actually ask in the wild.

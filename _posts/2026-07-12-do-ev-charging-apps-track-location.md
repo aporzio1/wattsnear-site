@@ -3,6 +3,7 @@ layout: post
 title: "Do Ev Charging Apps Track Location"
 date: 2026-07-12 09:00:00 -0400
 author: Andrew Porzio
+description: "Pull up almost any charging app and one thing happens fast: it wants your location. That raises a fair question - do EV charging apps track location?."
 ---
 
 Pull up almost any charging app and one thing happens fast: it wants your location. That raises a fair question - do EV charging apps track location? Often, yes. But the real answer is more nuanced than a simple yes or no, because "using your location" and "tracking your location" are not always the same thing.

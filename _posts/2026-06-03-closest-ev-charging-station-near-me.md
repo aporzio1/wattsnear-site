@@ -5,6 +5,7 @@ date: 2026-06-03 09:00:00 -0400
 author: Andrew Porzio
 summary: "Find the closest EV charging station near me faster with live data, price checks, and smart filters that help drivers charge nearby for less."
 image: "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/f59cced4-15b1-4f93-9e30-80d265f507a7.webp"
+description: "Find the closest EV charging station near me faster with live data, price checks, and smart filters that help drivers charge nearby for less."
 ---
 
 ![Closest EV Charging Station Near Me Fast](https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/f59cced4-15b1-4f93-9e30-80d265f507a7.webp)

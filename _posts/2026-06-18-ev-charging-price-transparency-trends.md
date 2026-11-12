@@ -3,6 +3,7 @@ layout: post
 title: "Ev Charging Price Transparency Trends"
 date: 2026-06-18 09:00:00 -0400
 author: Andrew Porzio
+description: "You pull into a fast charger with 18 miles left, plug in, and only then realize the price on the screen does not match what you expected."
 ---
 
 You pull into a fast charger with 18 miles left, plug in, and only then realize the price on the screen does not match what you expected. That gap is why EV charging price transparency trends matter right now. For drivers, this is not a policy debate or a nice-to-have feature. It is the difference between a simple stop and a frustrating, expensive one.

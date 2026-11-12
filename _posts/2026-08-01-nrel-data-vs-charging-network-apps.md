@@ -3,6 +3,7 @@ layout: post
 title: "Nrel Data Vs Charging Network Apps"
 date: 2026-08-01 09:00:00 -0400
 author: Andrew Porzio
+description: "Pull up a charger on the road and you usually need one answer fast: where can I charge next, and what will it cost me? That is where NREL data vs."
 ---
 
 Pull up a charger on the road and you usually need one answer fast: where can I charge next, and what will it cost me? That is where NREL data vs charging network apps becomes a real-world decision, not a technical one. One approach starts with a government-backed station dataset meant to cover the whole market. The other starts with a network’s own app, which is often designed to keep you inside that network.

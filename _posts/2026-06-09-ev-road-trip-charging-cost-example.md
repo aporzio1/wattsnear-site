@@ -5,6 +5,7 @@ date: 2026-06-09 09:00:00 -0400
 author: Andrew Porzio
 summary: "See an EV road trip charging cost example with real math, price variables, and route decisions that can lower fast-charging costs on long drives."
 image: "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/7c8375d2-486c-4631-881f-dae61ebf27dd.webp"
+description: "See an EV road trip charging cost example with real math, price variables, and route decisions that can lower fast-charging costs on long drives."
 ---
 
 ![EV Road Trip Charging Cost Example](https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/36ae28e6-5c8f-4597-b27a-d61cfc0ddf6d/7c8375d2-486c-4631-881f-dae61ebf27dd.webp)

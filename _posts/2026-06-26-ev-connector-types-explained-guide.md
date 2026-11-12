@@ -3,6 +3,7 @@ layout: post
 title: "Ev Connector Types Explained Guide"
 date: 2026-06-26 09:00:00 -0400
 author: Andrew Porzio
+description: "Pull into the wrong fast charger with 8% battery left, and connector types stop being trivia fast."
 ---
 
 Pull into the wrong fast charger with 8% battery left, and connector types stop being trivia fast. This EV connector types explained guide is built for real-world charging decisions: what fits your car, what delivers AC versus DC, and where U.S. drivers still get tripped up.

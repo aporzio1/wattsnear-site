@@ -3,6 +3,7 @@ layout: post
 title: "Tesla Charging What Drivers Need To Know"
 date: 2026-09-06 09:00:00 -0400
 author: Andrew Porzio
+description: "A Tesla can feel easy right up until charging stops being automatic. At home, you plug in and move on. On the road, things get more complicated fast."
 ---
 
 A Tesla can feel easy right up until charging stops being automatic. At home, you plug in and move on. On the road, things get more complicated fast: Supercharger pricing changes by site, slower public chargers can cost more than expected, and not every station that looks compatible is actually the best choice for your stop.

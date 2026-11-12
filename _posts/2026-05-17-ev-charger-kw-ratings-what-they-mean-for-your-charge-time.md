@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "EV Charger kW Ratings: What They Mean for Your Charge Time"
+title: "kW Ratings: What They Mean for Charge Time"
 date: 2026-05-17 09:00:00 -0400
 author: Andrew Porzio
 summary: "A charger's kW rating is the ceiling. Your car's onboard charger and battery acceptance rate set the real speed limit — here's how to read both before you commit to a station."
 read_time: 7
 image: /assets/blog/ev-charger-kw-ratings-what-they-mean-for-your-charge-time.jpg
+description: "A charger's kW rating is the ceiling. Your car's onboard charger and battery acceptance rate set the real speed limit — here's how to read both before."
 ---
 
 ![EV Charger kW Ratings: What They Mean for Your Charge Time](/assets/blog/ev-charger-kw-ratings-what-they-mean-for-your-charge-time.jpg)

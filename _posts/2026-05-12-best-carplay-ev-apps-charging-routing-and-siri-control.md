@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Best CarPlay EV Apps: Charging, Routing, and Siri Control"
+title: "Best CarPlay EV Apps: Charge, Route, Siri"
 date: 2026-05-12 15:00:00 -0400
 author: Andrew Porzio
 summary: "Most charging apps are phone UIs crammed onto the dashboard. Here's the lean CarPlay EV stack that actually works at 70 mph, plus the Siri shortcut that beats every menu tap."
 read_time: 9
 image: /assets/blog/best-carplay-ev-apps-charging-routing-and-siri-control.jpg
+description: "Most charging apps are phone UIs crammed onto the dashboard."
 ---
 
 ![Best CarPlay EV Apps: Charging, Routing, and Siri Control](/assets/blog/best-carplay-ev-apps-charging-routing-and-siri-control.jpg)

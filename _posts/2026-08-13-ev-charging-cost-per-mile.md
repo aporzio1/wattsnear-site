@@ -3,6 +3,7 @@ layout: post
 title: "Ev Charging Cost Per Mile"
 date: 2026-08-13 09:00:00 -0400
 author: Andrew Porzio
+description: "A public charger that looks convenient can quietly double your driving cost. That is why EV charging cost per mile matters more than the posted price."
 ---
 
 A public charger that looks convenient can quietly double your driving cost. That is why EV charging cost per mile matters more than the posted price per kWh. What you actually care about is simple: how much it costs to move your car one mile, and whether the charger in front of you is worth using.

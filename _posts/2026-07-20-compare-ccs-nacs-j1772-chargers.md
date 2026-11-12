@@ -3,6 +3,7 @@ layout: post
 title: "Compare Ccs Nacs J1772 Chargers"
 date: 2026-07-20 09:00:00 -0400
 author: Andrew Porzio
+description: "Pull into a public charger with 8% battery left and connector types stop being trivia. If you need to compare CCS NACS J1772 chargers, the real question."
 ---
 
 Pull into a public charger with 8% battery left and connector types stop being trivia. If you need to compare CCS NACS J1772 chargers, the real question is simple: which plug works with your car, how fast will it charge, and what limits matter when you're paying by the minute or the kilowatt-hour?

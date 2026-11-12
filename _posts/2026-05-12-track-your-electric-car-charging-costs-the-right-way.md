@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Track Your Electric Car Charging Costs the Right Way"
+title: "Track EV Charging Costs the Right Way"
 date: 2026-05-12 14:00:00 -0400
 author: Andrew Porzio
 summary: "Most EV drivers have no idea what they actually pay per charge. A simple log of five fields, plus the $/mile math, surfaces the expensive stations and off-peak windows hiding in plain sight."
 read_time: 8
 image: /assets/blog/track-your-electric-car-charging-costs-the-right-way.jpg
+description: "Most EV drivers have no idea what they actually pay per charge."
 ---
 
 ![Track Your Electric Car Charging Costs the Right Way](/assets/blog/track-your-electric-car-charging-costs-the-right-way.jpg)

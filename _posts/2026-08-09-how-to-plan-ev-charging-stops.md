@@ -3,6 +3,7 @@ layout: post
 title: "How To Plan Ev Charging Stops"
 date: 2026-08-09 09:00:00 -0400
 author: Andrew Porzio
+description: "A bad charging stop usually starts with one wrong assumption: that the charger closest to your route is the best option. Sometimes."
 ---
 
 A bad charging stop usually starts with one wrong assumption: that the charger closest to your route is the best option. Sometimes it is. Often it is not. If you want to know how to plan EV charging stops without wasting time, overpaying, or limping into a parking lot at 2%, you need to think about speed, price, reliability, and battery state all at once.

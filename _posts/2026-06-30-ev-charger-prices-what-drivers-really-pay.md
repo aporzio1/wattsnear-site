@@ -3,6 +3,7 @@ layout: post
 title: "Ev Charger Prices What Drivers Really Pay"
 date: 2026-06-30 09:00:00 -0400
 author: Andrew Porzio
+description: "Public charging gets expensive fast when the price on the screen tells only half the story."
 ---
 
 Public charging gets expensive fast when the price on the screen tells only half the story. EV charger prices can swing from fairly reasonable to surprisingly high depending on charging speed, network rules, time on the plug, and even how busy a station is.
